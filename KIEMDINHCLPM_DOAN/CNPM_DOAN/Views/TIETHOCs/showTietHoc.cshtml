@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.TIETHOC>
+
+@{
+    ViewBag.Title = "showTietHoc";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/MyCss/nhomhoctap.css" />
+@Styles.Render("~/Content/css")
+<div class="content">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayName("Tên môn học")
+            </th>
+            <th>
+                @Html.DisplayName("Thứ")
+            </th>
+            <th>
+                @Html.DisplayName("Tiết bắt đầu")
+            </th>
+            <th>
+                @Html.DisplayName("Tiết kết thúc")
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenMH)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Thu)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TietBatDau)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TietKetThuc)
+                </td>
+            </tr>
+        }
+    </table>
+    <button id="addGroup" onclick="location.href='@Url.Action("themTietHocMoi", "TIETHOCs")'">Tạo lịch học</button>
+</div>

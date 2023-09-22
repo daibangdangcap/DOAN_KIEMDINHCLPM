@@ -1,0 +1,139 @@
+﻿@model CNPM_DOAN.Models.NGUOIDUNG
+
+@{
+    ViewBag.Title = "Informs";
+    Layout = null;
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xoa Tai Khoan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="~/MyCss/xoataikhoan.css" />
+    <link rel="stylesheet" href="~/MyCss/informs.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <a href="@Url.Action("showBaiTap", "BAITAPs", new { iduser = Session["IDUSER"] })" style="color:white">Quay về trang chủ</a>
+    <div class="container emp-profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    @if (Model.Avatar != null)
+                    {
+                        <img src="@Url.Action("GetImage", "NGUOIDUNGs", new { id = Model.IDNguoiDung })" alt="" style="width:100%;height:100%;" />
+                    }
+                    else
+                    {<img src="" alt="" />}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Họ và tên</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.TenNguoiDung</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.Email</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Ngày sinh</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.NgaySinh.ToString("dd/MM/yyyy")</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Giới tính</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.GioiTinh</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Tên tài khoản</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.TenTaiKhoan</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Mật khẩu</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>************</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button class="btn2" onclick="location.href='@Url.Action("updateMatKhau", "NGUOIDUNGs", new { iduser = Session["IDUSER"] })'">Đổi mật khẩu</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button class="profile-edit-btn" name="btnAddMore" onclick="location.href='@Url.Action("updateUserInfo", "NGUOIDUNGs", new { iduser = Session["IDUSER"] })'">Chỉnh sửa thông tin cá nhân</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                    <br />
+                    @using (Html.BeginForm("UpLoad", "NGUOIDUNGs", new { iduserr = Model.IDNguoiDung }, FormMethod.Post, new { id = "submitForm", enctype = "multipart/form-data" }))
+                    {
+                        <input type="file" name="file" id="myFile">
+                    }
+                    <button class="btn3">xóa tài khoản</button>
+                    <button class="btn4" onclick="location.href='@Url.Action("Logout", "NGUOIDUNGs")'">Đăng xuất</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="modal0 hide">
+        <div class="modal_inner">
+            <div class="modal_header">
+                <p>Bạn có muốn xóa tài khoản không?</p>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="modal_body">
+                <p>Hệ thống sẽ tự động xóa đi các dữ liệu liên quan đến dữ liệu của bạn và bạn sẽ không thể nào đăng nhập lại bằng tài khoản này được nữa.</p><br>
+                <input type="checkbox" class="confirm-checkbox" id="confirm-checkbox" name="fav_language" value="Tôi đã hiểu và muốn tiếp tục">
+                <label for="confirm-checkbox">Tôi đã hiểu và muốn tiếp tục</label><br>
+            </div>
+            <div class="modal_footer">
+                <button class="delete-button disabled" onclick="location.href='@Url.Action("deleteTaiKhoan", "NGUOIDUNGs", new { iduser = Session["IDUSER"] })'">Xóa</button>
+                <button class="comeback-button">Quay lại</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="~/MyJs/xoataikhoan.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#myFile').on('change', function () {
+            $('#submitForm').submit();
+        });
+    });
+</script>

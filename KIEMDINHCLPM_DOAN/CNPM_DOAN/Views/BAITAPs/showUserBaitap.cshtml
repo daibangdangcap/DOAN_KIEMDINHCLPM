@@ -1,0 +1,21 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.NGUOIDUNG>
+
+@{
+    ViewBag.Title = "showUserBaiTap";
+}
+
+<link rel="stylesheet" href="~/MyCss/nhomhoctap.css" />
+<div class="content">
+    <div class="content-group">
+        @foreach (var item in Model)
+        {
+            <div class="content-group-item">
+                <div class="content-group-item-name" onclick="location.href='@Url.Action("showBaiTap_PH", "BAITAPs", new {iduser=item.IDNguoiDung})'">
+                    <p>@item.TenNguoiDung</p>
+                </div>
+                <button class="deleteGroup"><i class="fa-solid fa-trash"></i></button>
+                <button class="editGroup"><i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
+        }
+    </div>
+</div>

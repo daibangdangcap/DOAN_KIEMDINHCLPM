@@ -1,0 +1,38 @@
+﻿* {
+    position: relative;
+    margin: 0;
+    font-size: 20px;
+    font-family: monospace;
+    text-align: center;
+}
+
+.tieude {
+    position: relative;
+    font-size: 40px;
+    top: 15px;
+}
+
+.button {
+    position: relative;
+    left: 230px;
+    font-size: 50px;
+}
+
+.suabaitap {
+    position: relative;
+    top: 100px;
+}
+
+.button1 {
+    position: relative;
+    bottom: 35px;
+    left: 730px;
+    font-size: 50px;
+}
+
+.button2 {
+    position: relative;
+    left: 320px;
+    top: 80px;
+    font-size: 40px;
+}

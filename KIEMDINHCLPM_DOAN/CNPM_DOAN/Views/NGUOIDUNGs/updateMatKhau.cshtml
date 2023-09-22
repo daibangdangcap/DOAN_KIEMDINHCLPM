@@ -1,0 +1,40 @@
+﻿@model CNPM_DOAN.Models.NGUOIDUNG
+
+@{
+    ViewBag.Title = "updateMatKhau";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/MyCss/Chinhsuamatkhau.css" />
+<main>
+    <div class="border">
+        <form action="/NGUOIDUNGs/updateMatKhau?id=@Session["IDUSER"]" method="post">
+            <h1 class="tieude">Chỉnh sửa mật khẩu</h1>
+            <table class="chsuamk">
+                <tr class="MKC">
+                    <td>Mật khẩu cũ </td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="matkhaucu" required></td>
+                </tr>
+                <tr class="MKM">
+                    <td>Mật khẩu mới </td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="matkhaumoi" required></td>
+                </tr>
+                <tr class="XNMK">
+                    <td>Xác nhận mật khẩu</td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="xacnhanmatkhaumoi" required></td>
+                </tr>
+
+                <tr class="button">
+                    <td>&nbsp;</td>
+                    <td class="btchsuamk"><input type="submit" value="Lưu"></td>
+                </tr>
+
+            </table>
+        </form>
+    </div>
+</main>

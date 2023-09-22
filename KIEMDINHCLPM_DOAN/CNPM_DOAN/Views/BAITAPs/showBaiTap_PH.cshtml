@@ -1,0 +1,25 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.BAITAP>
+
+@{
+    ViewBag.Title = "showToDo";
+}
+
+<link rel="stylesheet" href="~/MyCss/nhomhoctap.css" />
+<div class="content">
+    <h1>Các bài tập đã giao</h1>
+    <div class="content-group">
+        @foreach (var item in Model)
+        {
+            <div class="content-group-item">
+                <div class="content-group-item-name" onclick="location.href='@Url.Action("showBaiGiai_PH", "BAIGIAIs", new { idbaitap = item.IDBaiTap, idnguoinhan = item.IDNguoiNhan })'">
+                    <p>@item.TenBT</p>
+                    <span style="margin-left:30px">Hạn nộp: @String.Format("{0:d}",item.HanNop)</span>
+                </div>
+                <button class="deleteGroup" onclick="location.href='@Url.Action("DeleteBaiTap", "BAITAPs", new { idbaitap = item.IDBaiTap, iduser = Session["IDUSER"] })'"><i class="fa-solid fa-trash"></i></button>
+                <button class="editGroup" onclick="location.href='@Url.Action("updateBaiTap", "BAITAPs", new {idbaitap=item.IDBaiTap})'"><i class="fa-solid fa-pen-to-square"></i></button>
+            </div>
+        }
+    </div>
+    <button id="addGroup" onclick="location.href='@Url.Action("TaoBTMoi", "BAITAPs")'">Tạo bài tập mới</button>
+    <button onclick="location.href='@Url.Action("showBieuDoBT_PH", "BAITAPs", new { idnguoinhan = ViewBag.NguoiNhan })'">Thống kê bài tập</button>
+</div>

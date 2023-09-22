@@ -1,0 +1,37 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.THOIKHOABIEU>
+
+@{
+    ViewBag.Title = "showTKB";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/MyCss/nhomhoctap.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div class="content">
+    <h1>Các thời khóa biểu đã tạo</h1>
+    <div class="content-group">
+        @foreach (var item in Model)
+        {
+            <div class="content-group-item">
+                <div class="content-group-item-name" onclick="location.href='@Url.Action("showTietHoc", "TIETHOCs", new {idtkb=item.IDTKB})'">
+                    <p>@item.TenTKB</p>
+                </div>
+                <button class="deleteGroup" onclick="location.href='@Url.Action("deleteTKB", "THOIKHOABIEUx", new { idnguoitao = Session["IDUSER"],idtkb=item.IDTKB })'"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        }
+    </div>
+    <button id="addGroup" onclick="location.href = '@Url.Action("taoTKBMoi", "THOIKHOABIEUx", new { iduser = Session["IDUSER"]})'">Tạo thời khóa biểu mới</button>
+    <div class="modal fade" id="myModal" role="dialog" data-url="@Url.Action("taoTKBMoi", "THOIKHOABIEUx")"></div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.btn-block').click(function () {
+            var url = $('#myModal').data('url');
+            $.get(url, function (data) {
+                $("#myModal").html(data);
+                $("#myModal").modal('show');
+            });
+        })
+    });
+</script>

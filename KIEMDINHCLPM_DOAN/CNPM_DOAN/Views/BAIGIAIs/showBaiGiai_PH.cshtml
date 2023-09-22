@@ -1,0 +1,27 @@
+﻿@model CNPM_DOAN.Models.BAIGIAI
+
+@{
+    ViewBag.Title = "showBaiGiai_PH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    @if (Model == null)
+    {
+        <p>Chưa nộp bài</p>
+    }
+    else
+    {
+        <p>@Model.TenBaiGiai</p>
+        <p>@Model.NgayHoanThanh</p>
+        
+            using (Html.BeginForm("ChamDiem", "BAIGIAIs", FormMethod.Post,new { encytype= "multipart/form-data" }))
+            {
+                <input type="number" value="@Model.SoDiem" name="diem"/>
+                <input type="hidden" value="@Model.IDBaiTap" name="idbt"/>
+                <input type="hidden" value="@Model.IDNguoiDung" name="idnguoilam"/>
+                <input type="submit" value="Chấm điểm"/>
+            }
+        
+    }
+</div>

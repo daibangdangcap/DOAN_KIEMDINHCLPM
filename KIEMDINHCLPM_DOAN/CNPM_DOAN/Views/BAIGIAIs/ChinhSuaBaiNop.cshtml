@@ -1,0 +1,15 @@
+﻿@model CNPM_DOAN.Models.BAIGIAI
+
+@{
+    ViewBag.Title = "ChinhSuaBaiNop";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    @using (Html.BeginForm("ChinhSuaBaiNop", "BAIGIAIs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="bg" />
+        <input type="hidden" name="idbaigiai" value="@Session["IDBAIGIAI"]" />
+        <input type="submit" value="Xác nhận" />
+    }
+</div>

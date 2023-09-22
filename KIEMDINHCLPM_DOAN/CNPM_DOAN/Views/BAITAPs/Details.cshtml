@@ -1,0 +1,67 @@
+﻿@model CNPM_DOAN.Models.BAITAP
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>BAITAP</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenBT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenBT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayGiao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayGiao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HanNop)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HanNop)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IDNhom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IDNhom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGUOIDUNG.TenNguoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGUOIDUNG.TenNguoiDung)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGUOIDUNG1.TenNguoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGUOIDUNG1.TenNguoiDung)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDBaiTap }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

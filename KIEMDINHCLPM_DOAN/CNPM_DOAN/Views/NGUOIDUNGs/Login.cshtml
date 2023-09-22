@@ -1,0 +1,12 @@
+﻿@model CNPM_DOAN.Models.Login
+<div class="login" id="login">
+    <h2>Login</h2>
+    <section>
+        <form action="/NGUOIDUNGs/Login" method="post">
+            @Html.AntiForgeryToken()
+            <input type="text" placeholder="Tên Đăng Nhập" id="nameAccount" name="username" class="inputForm" required oninvalid="this.setCustomValidity('Tên tài khoản không được rỗng')">
+            <input type="password" placeholder="Mật Khẩu" id="password" name="password" class="inputForm" required oninvalid="this.setCustomValidity('Mật khẩu không được rỗng')">
+            <button type="submit" class="buttonLogin"><span>Đăng nhập</span></button>
+        </form>
+    </section>
+</div>

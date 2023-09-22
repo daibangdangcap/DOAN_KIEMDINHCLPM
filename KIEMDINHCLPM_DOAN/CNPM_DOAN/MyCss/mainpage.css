@@ -1,0 +1,269 @@
+﻿* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 300px;
+    position: fixed;
+    left: 0px;
+}
+.content {
+    position: absolute;
+    width: 95.5%;
+    height: 89%;
+    bottom: 0px;
+    right: 0px;
+    font-family: sans-serif;
+    z-index: -1;
+}
+.underBar {
+    position: absolute;
+    width: 95.5%;
+    height: 89%;
+    bottom: 0px;
+    right: 0px;
+    font-family: sans-serif;
+    z-index: -1;
+}
+.top-nav {
+    height: 75px;
+    background-color: lightskyblue;
+    overflow: hidden;
+    text-align: center;
+    font-family: 'Segoe UI';
+    box-shadow: 0 0 5pt 0pt black;
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    font-weight: lighter;
+    position: fixed;
+    width: 100%;
+}
+
+    .top-nav ul a {
+        top: 0px;
+        padding: 20px 30px 45px 30px;
+        color: #000080;
+        text-decoration: none;
+        list-style: none;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 5px;
+        height: 55px;
+        transition-duration: 1s;
+        position: fixed;
+    }
+
+        .top-nav ul a::after {
+            content: "";
+            position: absolute;
+            background-color: whitesmoke;
+            height: 1.5px;
+            width: 100%;
+            left: 0px;
+            bottom: -3.5px;
+            transform: scale(0,0);
+            transition: 0.3s ease-out;
+        }
+
+        .top-nav ul a:hover::after {
+            transform: scale(1,2);
+        }
+
+        .top-nav ul a:hover {
+            color: #008080;
+        }
+
+.right-nav {
+    position: absolute;
+    right: 0px;
+}
+ .avatar{
+     border-radius:50%;
+     width:50px;
+     bottom:10px;
+     right:10px;
+     position:absolute;
+ }
+
+.nothover:hover::after {
+    width: 0%;
+    transition: none;
+}
+.nothover::after{
+    width:0%;
+}
+.left-nav {
+    position: absolute;
+    left: 0px;
+}
+
+#dangnhap {
+    margin-right: 130px;
+}
+
+#gioithieu {
+    margin-left: 355px;
+}
+
+#lienhe {
+    margin-left: 500px;
+}
+/*.nav-item1{
+    position: relative;
+    left:180px;
+    bottom:40px ; 
+    font-size: 30px; 
+    font-family:Consolas; 
+    list-style: none; 
+    color:white
+}
+.nav-item2{
+    position: relative;
+    left: 380px; 
+    bottom: 75px;
+    font-size: 30px; 
+    font-family: Consolas;
+     list-style: none; 
+     color: white
+}
+.nav-item3{
+    position: relative;
+    left: 800px; 
+    bottom: 110px;
+    font-size: 30px; 
+    font-family: Consolas; 
+    list-style: none; 
+    color: white
+}
+.nav-item4{
+    position: relative;
+    left: 1010px;
+    bottom:145px;
+     font-size: 30px; 
+     font-family: Consolas; 
+     list-style: none; 
+     color: white
+}*/
+
+
+body {
+    background: white;
+    padding: 0;
+    border: 0;
+    width: auto;
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.title {
+    width: 700px;
+    margin: auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    top: 300px;
+    text-align: center;
+    position: relative;
+}
+
+
+.menu {
+    position: fixed;
+    height: 95%;
+    width: 65px;
+    top: 75px;
+    background: #3A5FCD;
+    transition: width 1s;
+    overflow: hidden;
+    font-family: 'Poppins';
+    box-shadow: 0 0 5pt black;
+}
+
+    .menu:hover {
+        width: 250px;
+    }
+
+.menuitem span {
+    position: absolute;
+    left: 80px;
+    top: 20px;
+    transition: color 1s;
+    color: whitesmoke;
+    font-family: 'Segoe UI';
+    font-size: 17px;
+}
+
+.menuitem {
+    height: 19%;
+    line-height: 100px;
+    position: relative;
+    padding: 20px;
+    transition-duration: 0.5s;
+    font-weight: lighter;
+}
+
+
+    .menuitem:hover {
+        background: black;
+        cursor: pointer;
+        transition-duration: 0.5s;
+    }
+
+a{
+    color:whitesmoke;
+}
+
+
+
+.uno {
+    color: #FFFAFA;
+}
+
+/*.uno:hover{
+    border-left: 60px solid rgb(14, 14, 73);
+}*/
+
+
+
+.dos {
+    color: #FFFAFA;
+}
+
+/*.dos:hover{
+    border-left: 60px solid rgb(14, 14, 73);
+}*/
+
+
+.tres {
+    color: #FFFAFA;
+}
+
+/*.tres:hover{
+    border-left: 60px solid rgb(14, 14, 73);
+}*/
+
+
+.cuatro {
+    color: #FFFAFA;
+}
+
+/*.cuatro:hover{
+    border-left: 60px solid rgb(14, 14, 73);
+}*/
+
+
+.cinco {
+    color: #FFFAFA;
+}
+
+/*.cinco:hover{
+    border-left: 60px solid rgb(14, 14, 73);
+}*/
+
+i {
+    font-size: 25px;
+}

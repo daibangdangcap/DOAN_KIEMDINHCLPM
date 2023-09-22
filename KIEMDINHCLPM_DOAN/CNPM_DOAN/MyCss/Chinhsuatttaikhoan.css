@@ -1,0 +1,51 @@
+﻿* {
+    align-items: center;
+    font-size: 30px;
+    text-align: center;
+    color: darkblue;
+    font-family: monospace;
+}
+
+td {
+    position: relative;
+    left: 40px;
+    top: 20px;
+}
+
+.tieude {
+    position: relative;
+    font-size: 40px;
+}
+
+input[type=text] {
+    position: relative;
+    left: 400px;
+    bottom: 45px;
+    text-align: left;
+}
+
+input[type=email] {
+    position: relative;
+    left: 400px;
+    bottom: 45px;
+    text-align: left;
+}
+
+input[type=date] {
+    position: relative;
+    left: 348px;
+    bottom: 45px;
+}
+
+input[type=submit] {
+    position: relative;
+    left: 150px;
+    top: 40px;
+    background-color: lightblue;
+    border-color: blue;
+}
+
+.gioitinh {
+    position: relative;
+    left: 48px;
+}

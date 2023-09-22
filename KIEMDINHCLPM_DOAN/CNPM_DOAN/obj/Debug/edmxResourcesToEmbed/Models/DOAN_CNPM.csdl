@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CNPM_DOANModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BAIGIAI">
+    <Key>
+      <PropertyRef Name="IDBaiGiai" />
+    </Key>
+    <Property Name="IDBaiGiai" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenBaiGiai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DuongDan" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="LoaiTep" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="SoDiem" Type="Double" />
+    <Property Name="NgayHoanThanh" Type="DateTime" Precision="3" />
+    <Property Name="IDNguoiDung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDBaiTap" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="BAITAP" Relationship="Self.FK__BAIGIAI__IDBaiTa__5441852A" FromRole="BAIGIAI" ToRole="BAITAP" />
+    <NavigationProperty Name="NGUOIDUNG" Relationship="Self.FK__BAIGIAI__IDNguoi__534D60F1" FromRole="BAIGIAI" ToRole="NGUOIDUNG" />
+  </EntityType>
+  <EntityType Name="BAITAP">
+    <Key>
+      <PropertyRef Name="IDBaiTap" />
+    </Key>
+    <Property Name="IDBaiTap" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenBT" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="NgayGiao" Type="DateTime" Precision="3" />
+    <Property Name="HanNop" Type="DateTime" Precision="3" />
+    <Property Name="IDNguoiTao" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDNguoiNhan" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="BAIGIAIs" Relationship="Self.FK__BAIGIAI__IDBaiTa__5441852A" FromRole="BAITAP" ToRole="BAIGIAI" />
+    <NavigationProperty Name="NGUOIDUNG" Relationship="Self.FK__BAITAP__IDNguoiN__5070F446" FromRole="BAITAP" ToRole="NGUOIDUNG" />
+    <NavigationProperty Name="NGUOIDUNG1" Relationship="Self.FK__BAITAP__IDNguoiT__4F7CD00D" FromRole="BAITAP" ToRole="NGUOIDUNG" />
+    <Property Name="DuongDan" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="LoaiTep" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MUCTIEU">
+    <Key>
+      <PropertyRef Name="IDMucTieu" />
+    </Key>
+    <Property Name="IDMucTieu" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenMucTieu" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IDNguoiDung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="NGUOIDUNG" Relationship="Self.FK__MUCTIEU__IDNguoi__59FA5E80" FromRole="MUCTIEU" ToRole="NGUOIDUNG" />
+  </EntityType>
+  <EntityType Name="NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="IDNguoiDung" />
+    </Key>
+    <Property Name="IDNguoiDung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenNguoiDung" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GioiTinh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgaySinh" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Avatar" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TenTaiKhoan" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDVaiTro" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDQuanLy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="BAIGIAIs" Relationship="Self.FK__BAIGIAI__IDNguoi__534D60F1" FromRole="NGUOIDUNG" ToRole="BAIGIAI" />
+    <NavigationProperty Name="BAITAPs" Relationship="Self.FK__BAITAP__IDNguoiN__5070F446" FromRole="NGUOIDUNG" ToRole="BAITAP" />
+    <NavigationProperty Name="BAITAPs1" Relationship="Self.FK__BAITAP__IDNguoiT__4F7CD00D" FromRole="NGUOIDUNG" ToRole="BAITAP" />
+    <NavigationProperty Name="MUCTIEUx" Relationship="Self.FK__MUCTIEU__IDNguoi__59FA5E80" FromRole="NGUOIDUNG" ToRole="MUCTIEU" />
+    <NavigationProperty Name="NGUOIDUNG1" Relationship="Self.FK__NGUOIDUNG__IDQua__49C3F6B7" FromRole="NGUOIDUNG" ToRole="NGUOIDUNG1" />
+    <NavigationProperty Name="NGUOIDUNG2" Relationship="Self.FK__NGUOIDUNG__IDQua__49C3F6B7" FromRole="NGUOIDUNG1" ToRole="NGUOIDUNG" />
+    <NavigationProperty Name="VAITRO" Relationship="Self.FK__NGUOIDUNG__IDVai__48CFD27E" FromRole="NGUOIDUNG" ToRole="VAITRO" />
+    <NavigationProperty Name="THOIKHOABIEUx" Relationship="Self.FK__THOIKHOAB__IDNgu__4CA06362" FromRole="NGUOIDUNG" ToRole="THOIKHOABIEU" />
+    <NavigationProperty Name="TIETHOCs" Relationship="Self.FK__TIETHOC__IDNGUOI__5DCAEF64" FromRole="NGUOIDUNG" ToRole="TIETHOC" />
+    <NavigationProperty Name="TODOes" Relationship="Self.FK__TODO__IDNguoiDun__571DF1D5" FromRole="NGUOIDUNG" ToRole="TODO" />
+  </EntityType>
+  <EntityType Name="THOIKHOABIEU">
+    <Key>
+      <PropertyRef Name="IDTKB" />
+    </Key>
+    <Property Name="IDTKB" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenTKB" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDNguoiDung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="NGUOIDUNG" Relationship="Self.FK__THOIKHOAB__IDNgu__4CA06362" FromRole="THOIKHOABIEU" ToRole="NGUOIDUNG" />
+    <NavigationProperty Name="TIETHOCs" Relationship="Self.FK__TIETHOC__IDTKB__5CD6CB2B" FromRole="THOIKHOABIEU" ToRole="TIETHOC" />
+  </EntityType>
+  <EntityType Name="TIETHOC">
+    <Key>
+      <PropertyRef Name="IDMonHoc" />
+    </Key>
+    <Property Name="IDMonHoc" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenMH" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Thu" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TietBatDau" Type="Int16" Nullable="false" />
+    <Property Name="TietKetThuc" Type="Int16" Nullable="false" />
+    <Property Name="IDTKB" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="IDNGUOITAO" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="NGUOIDUNG" Relationship="Self.FK__TIETHOC__IDNGUOI__5DCAEF64" FromRole="TIETHOC" ToRole="NGUOIDUNG" />
+    <NavigationProperty Name="THOIKHOABIEU" Relationship="Self.FK__TIETHOC__IDTKB__5CD6CB2B" FromRole="TIETHOC" ToRole="THOIKHOABIEU" />
+  </EntityType>
+  <EntityType Name="TODO">
+    <Key>
+      <PropertyRef Name="IDToDo" />
+    </Key>
+    <Property Name="IDToDo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NDToDo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="NgayBatDau" Type="DateTime" Precision="3" />
+    <Property Name="NgayHoanThanh" Type="DateTime" Precision="3" />
+    <Property Name="HanChot" Type="DateTime" Precision="3" />
+    <Property Name="TrangThai" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="IDNguoiDung" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="NGUOIDUNG" Relationship="Self.FK__TODO__IDNguoiDun__571DF1D5" FromRole="TODO" ToRole="NGUOIDUNG" />
+  </EntityType>
+  <EntityType Name="VAITRO">
+    <Key>
+      <PropertyRef Name="IDVaiTro" />
+    </Key>
+    <Property Name="IDVaiTro" Type="String" MaxLength="5" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TenVaiTro" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="NGUOIDUNGs" Relationship="Self.FK__NGUOIDUNG__IDVai__48CFD27E" FromRole="VAITRO" ToRole="NGUOIDUNG" />
+  </EntityType>
+  <Association Name="FK__BAIGIAI__IDBaiTa__5441852A">
+    <End Role="BAITAP" Type="Self.BAITAP" Multiplicity="1" />
+    <End Role="BAIGIAI" Type="Self.BAIGIAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAITAP">
+        <PropertyRef Name="IDBaiTap" />
+      </Principal>
+      <Dependent Role="BAIGIAI">
+        <PropertyRef Name="IDBaiTap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BAIGIAI__IDNguoi__534D60F1">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="BAIGIAI" Type="Self.BAIGIAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="BAIGIAI">
+        <PropertyRef Name="IDNguoiDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BAITAP__IDNguoiN__5070F446">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="BAITAP" Type="Self.BAITAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="BAITAP">
+        <PropertyRef Name="IDNguoiNhan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BAITAP__IDNguoiT__4F7CD00D">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="BAITAP" Type="Self.BAITAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="BAITAP">
+        <PropertyRef Name="IDNguoiTao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MUCTIEU__IDNguoi__59FA5E80">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="MUCTIEU" Type="Self.MUCTIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="MUCTIEU">
+        <PropertyRef Name="IDNguoiDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NGUOIDUNG__IDQua__49C3F6B7">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="NGUOIDUNG1" Type="Self.NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="NGUOIDUNG1">
+        <PropertyRef Name="IDQuanLy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NGUOIDUNG__IDVai__48CFD27E">
+    <End Role="VAITRO" Type="Self.VAITRO" Multiplicity="1" />
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VAITRO">
+        <PropertyRef Name="IDVaiTro" />
+      </Principal>
+      <Dependent Role="NGUOIDUNG">
+        <PropertyRef Name="IDVaiTro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__THOIKHOAB__IDNgu__4CA06362">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="THOIKHOABIEU">
+        <PropertyRef Name="IDNguoiDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIETHOC__IDNGUOI__5DCAEF64">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="TIETHOC" Type="Self.TIETHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="TIETHOC">
+        <PropertyRef Name="IDNGUOITAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TODO__IDNguoiDun__571DF1D5">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="TODO" Type="Self.TODO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="TODO">
+        <PropertyRef Name="IDNguoiDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIETHOC__IDTKB__5CD6CB2B">
+    <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="1" />
+    <End Role="TIETHOC" Type="Self.TIETHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THOIKHOABIEU">
+        <PropertyRef Name="IDTKB" />
+      </Principal>
+      <Dependent Role="TIETHOC">
+        <PropertyRef Name="IDTKB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CNPM_DOANEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BAIGIAIs" EntityType="Self.BAIGIAI" />
+    <EntitySet Name="BAITAPs" EntityType="Self.BAITAP" />
+    <EntitySet Name="MUCTIEUx" EntityType="Self.MUCTIEU" />
+    <EntitySet Name="NGUOIDUNGs" EntityType="Self.NGUOIDUNG" />
+    <EntitySet Name="THOIKHOABIEUx" EntityType="Self.THOIKHOABIEU" />
+    <EntitySet Name="TIETHOCs" EntityType="Self.TIETHOC" />
+    <EntitySet Name="TODOes" EntityType="Self.TODO" />
+    <EntitySet Name="VAITROes" EntityType="Self.VAITRO" />
+    <AssociationSet Name="FK__BAIGIAI__IDBaiTa__5441852A" Association="Self.FK__BAIGIAI__IDBaiTa__5441852A">
+      <End Role="BAITAP" EntitySet="BAITAPs" />
+      <End Role="BAIGIAI" EntitySet="BAIGIAIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BAIGIAI__IDNguoi__534D60F1" Association="Self.FK__BAIGIAI__IDNguoi__534D60F1">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+      <End Role="BAIGIAI" EntitySet="BAIGIAIs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BAITAP__IDNguoiN__5070F446" Association="Self.FK__BAITAP__IDNguoiN__5070F446">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+      <End Role="BAITAP" EntitySet="BAITAPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BAITAP__IDNguoiT__4F7CD00D" Association="Self.FK__BAITAP__IDNguoiT__4F7CD00D">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+      <End Role="BAITAP" EntitySet="BAITAPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MUCTIEU__IDNguoi__59FA5E80" Association="Self.FK__MUCTIEU__IDNguoi__59FA5E80">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+      <End Role="MUCTIEU" EntitySet="MUCTIEUx" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NGUOIDUNG__IDQua__49C3F6B7" Association="Self.FK__NGUOIDUNG__IDQua__49C3F6B7">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+      <End Role="NGUOIDUNG1" EntitySet="NGUOIDUNGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NGUOIDUNG__IDVai__48CFD27E" Association="Self.FK__NGUOIDUNG__IDVai__48CFD27E">
+      <End Role="VAITRO" EntitySet="VAITROes" />
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__THOIKHOAB__IDNgu__4CA06362" Association="Self.FK__THOIKHOAB__IDNgu__4CA06362">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIETHOC__IDNGUOI__5DCAEF64" Association="Self.FK__TIETHOC__IDNGUOI__5DCAEF64">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+      <End Role="TIETHOC" EntitySet="TIETHOCs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TODO__IDNguoiDun__571DF1D5" Association="Self.FK__TODO__IDNguoiDun__571DF1D5">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNGs" />
+      <End Role="TODO" EntitySet="TODOes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIETHOC__IDTKB__5CD6CB2B" Association="Self.FK__TIETHOC__IDTKB__5CD6CB2B">
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEUx" />
+      <End Role="TIETHOC" EntitySet="TIETHOCs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

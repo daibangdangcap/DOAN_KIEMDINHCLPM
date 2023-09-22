@@ -1,0 +1,60 @@
+﻿@model CNPM_DOAN.Models.NGUOIDUNG
+
+<div class="border" id="register" style="margin-top:50px">
+    <form action="/NGUOIDUNGs/Register" method="post">
+        @Html.AntiForgeryToken()
+        <table class="tbdangki">
+            <h1 class="tieude">Đăng kí tài khoản</h1>
+            <td>Họ và tên</td>
+            <tr>
+                <td><input type="text" name="name" required="required" maxlength="30"></td>
+            </tr>
+            <td>Email</td>
+            <tr>
+                <td><input type="email" name="email" required></td>
+            </tr>
+            <td>Ngày sinh</td>
+            <tr>
+                <td><input type="date" name="birthday" required></td>
+            </tr>
+            <td>Giới tính</td>
+            <td>
+                <select class="gioitinh" name="gender">
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+            </td>
+            <tr>
+                <td>Vai trò </td>
+                <td>
+                    <select class="vaitro" name="role">
+                        <option value="Phụ huynh">Phụ huynh</option>
+                        <option value="Học sinh">Học sinh</option>
+                    </select>
+                </td>
+            <tr>
+                <td>Tài khoản</td>
+            <tr>
+                <td><input type="text" name="username" required></td>
+            </tr>
+            <td>Mật khẩu</td>
+            <tr>
+                <td><input type="password" name="password" id="password" required></td>
+            </tr>
+            <td>Xác nhận mật khẩu</td>
+            <tr>
+                <td><input type="password" name="repassword" required id="repassword" onsubmit="validate()"></td>
+            </tr>
+            <td><button type="submit" class="btdangki"><span>Đăng ký</span></td>
+            </tr>
+        </table>
+    </form>
+</div>
+
+<script>
+    function validate() {
+        var x = document.getElementById("password").value;
+        var y = document.getElementById("repassword").value;
+        x != y ? document.getElementById("repassword").setCustomValidity("Mật khẩu nhập lại không trùng khớp") : document.getElementById("repassword").setCustomValidity('');
+    }
+</script>

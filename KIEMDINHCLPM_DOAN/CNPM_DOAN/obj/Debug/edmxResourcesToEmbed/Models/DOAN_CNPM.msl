@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CNPM_DOANModelStoreContainer" CdmEntityContainer="CNPM_DOANEntities">
+    <EntitySetMapping Name="BAIGIAIs">
+      <EntityTypeMapping TypeName="CNPM_DOANModel.BAIGIAI">
+        <MappingFragment StoreEntitySet="BAIGIAI">
+          <ScalarProperty Name="IDBaiGiai" ColumnName="IDBaiGiai" />
+          <ScalarProperty Name="TenBaiGiai" ColumnName="TenBaiGiai" />
+          <ScalarProperty Name="DuongDan" ColumnName="DuongDan" />
+          <ScalarProperty Name="LoaiTep" ColumnName="LoaiTep" />
+          <ScalarProperty Name="SoDiem" ColumnName="SoDiem" />
+          <ScalarProperty Name="NgayHoanThanh" ColumnName="NgayHoanThanh" />
+          <ScalarProperty Name="IDNguoiDung" ColumnName="IDNguoiDung" />
+          <ScalarProperty Name="IDBaiTap" ColumnName="IDBaiTap" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BAITAPs">
+      <EntityTypeMapping TypeName="CNPM_DOANModel.BAITAP">
+        <MappingFragment StoreEntitySet="BAITAP">
+          <ScalarProperty Name="LoaiTep" ColumnName="LoaiTep" />
+          <ScalarProperty Name="DuongDan" ColumnName="DuongDan" />
+          <ScalarProperty Name="IDBaiTap" ColumnName="IDBaiTap" />
+          <ScalarProperty Name="TenBT" ColumnName="TenBT" />
+          <ScalarProperty Name="NgayGiao" ColumnName="NgayGiao" />
+          <ScalarProperty Name="HanNop" ColumnName="HanNop" />
+          <ScalarProperty Name="IDNguoiTao" ColumnName="IDNguoiTao" />
+          <ScalarProperty Name="IDNguoiNhan" ColumnName="IDNguoiNhan" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MUCTIEUx">
+      <EntityTypeMapping TypeName="CNPM_DOANModel.MUCTIEU">
+        <MappingFragment StoreEntitySet="MUCTIEU">
+          <ScalarProperty Name="IDMucTieu" ColumnName="IDMucTieu" />
+          <ScalarProperty Name="TenMucTieu" ColumnName="TenMucTieu" />
+          <ScalarProperty Name="IDNguoiDung" ColumnName="IDNguoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NGUOIDUNGs">
+      <EntityTypeMapping TypeName="CNPM_DOANModel.NGUOIDUNG">
+        <MappingFragment StoreEntitySet="NGUOIDUNG">
+          <ScalarProperty Name="IDNguoiDung" ColumnName="IDNguoiDung" />
+          <ScalarProperty Name="TenNguoiDung" ColumnName="TenNguoiDung" />
+          <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+          <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Avatar" ColumnName="Avatar" />
+          <ScalarProperty Name="TenTaiKhoan" ColumnName="TenTaiKhoan" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="IDVaiTro" ColumnName="IDVaiTro" />
+          <ScalarProperty Name="IDQuanLy" ColumnName="IDQuanLy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="THOIKHOABIEUx">
+      <EntityTypeMapping TypeName="CNPM_DOANModel.THOIKHOABIEU">
+        <MappingFragment StoreEntitySet="THOIKHOABIEU">
+          <ScalarProperty Name="IDTKB" ColumnName="IDTKB" />
+          <ScalarProperty Name="TenTKB" ColumnName="TenTKB" />
+          <ScalarProperty Name="IDNguoiDung" ColumnName="IDNguoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TIETHOCs">
+      <EntityTypeMapping TypeName="CNPM_DOANModel.TIETHOC">
+        <MappingFragment StoreEntitySet="TIETHOC">
+          <ScalarProperty Name="IDMonHoc" ColumnName="IDMonHoc" />
+          <ScalarProperty Name="TenMH" ColumnName="TenMH" />
+          <ScalarProperty Name="Thu" ColumnName="Thu" />
+          <ScalarProperty Name="TietBatDau" ColumnName="TietBatDau" />
+          <ScalarProperty Name="TietKetThuc" ColumnName="TietKetThuc" />
+          <ScalarProperty Name="IDTKB" ColumnName="IDTKB" />
+          <ScalarProperty Name="IDNGUOITAO" ColumnName="IDNGUOITAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TODOes">
+      <EntityTypeMapping TypeName="CNPM_DOANModel.TODO">
+        <MappingFragment StoreEntitySet="TODO">
+          <ScalarProperty Name="IDToDo" ColumnName="IDToDo" />
+          <ScalarProperty Name="NDToDo" ColumnName="NDToDo" />
+          <ScalarProperty Name="NgayBatDau" ColumnName="NgayBatDau" />
+          <ScalarProperty Name="NgayHoanThanh" ColumnName="NgayHoanThanh" />
+          <ScalarProperty Name="HanChot" ColumnName="HanChot" />
+          <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+          <ScalarProperty Name="IDNguoiDung" ColumnName="IDNguoiDung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VAITROes">
+      <EntityTypeMapping TypeName="CNPM_DOANModel.VAITRO">
+        <MappingFragment StoreEntitySet="VAITRO">
+          <ScalarProperty Name="IDVaiTro" ColumnName="IDVaiTro" />
+          <ScalarProperty Name="TenVaiTro" ColumnName="TenVaiTro" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

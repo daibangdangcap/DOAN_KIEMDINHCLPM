@@ -1,0 +1,166 @@
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\CNPM_DOAN.dll.config
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\CNPM_DOAN.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\CNPM_DOAN.pdb
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\csc.exe
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\csc.exe.config
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\csc.rsp
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\csi.exe
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\csi.exe.config
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\csi.rsp
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.AppContext.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Collections.Immutable.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Console.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Globalization.Calendars.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.IO.Compression.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.IO.FileSystem.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Net.Http.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Net.Sockets.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.ValueTuple.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Xml.XPath.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\vbc.exe
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\vbc.exe.config
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\vbc.rsp
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\VBCSCompiler.exe
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\roslyn\VBCSCompiler.exe.config
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\Antlr3.Runtime.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\Microsoft.Web.Infrastructure.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\Newtonsoft.Json.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.Helpers.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.Mvc.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.Optimization.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.Razor.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.Deployment.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.Razor.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\WebGrease.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.Helpers.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.Mvc.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.Optimization.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.Razor.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.Deployment.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.Razor.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\Newtonsoft.Json.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\Antlr3.Runtime.pdb
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.csproj.AssemblyReference.cache
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.csproj.CoreCompileInputs.cache
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.csproj.CopyComplete
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.pdb
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\EntityFramework.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\EntityFramework.SqlServer.dll
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\EntityFramework.xml
+C:\Bài tập\Công nghệ phần mềm\CNPM_DOAN\CNPM_DOAN\bin\EntityFramework.SqlServer.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\CNPM_DOAN.dll.config
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\CNPM_DOAN.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\CNPM_DOAN.pdb
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\csc.exe
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\csc.exe.config
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\csc.rsp
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\csi.exe
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\csi.exe.config
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\csi.rsp
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.AppContext.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Collections.Immutable.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Console.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Globalization.Calendars.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.IO.Compression.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.IO.FileSystem.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Net.Http.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Net.Sockets.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.ValueTuple.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Xml.XPath.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\vbc.exe
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\vbc.exe.config
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\vbc.rsp
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\VBCSCompiler.exe
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\roslyn\VBCSCompiler.exe.config
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\Antlr3.Runtime.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\EntityFramework.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\EntityFramework.SqlServer.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\Microsoft.Web.Infrastructure.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\Newtonsoft.Json.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.Helpers.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.Mvc.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.Optimization.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.Razor.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.Deployment.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.Razor.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\WebGrease.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\EntityFramework.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\EntityFramework.SqlServer.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.Helpers.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.Mvc.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.Optimization.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.Razor.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.Deployment.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\System.Web.WebPages.Razor.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\Newtonsoft.Json.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\Antlr3.Runtime.pdb
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.csproj.AssemblyReference.cache
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.csproj.CoreCompileInputs.cache
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.csproj.CopyComplete
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.dll
+C:\Bài tập\Kiểm định chất lượng phần mềm\DOAN_KIEMDINHCLPM\KIEMDINHCLPM_DOAN\CNPM_DOAN\obj\Debug\CNPM_DOAN.pdb

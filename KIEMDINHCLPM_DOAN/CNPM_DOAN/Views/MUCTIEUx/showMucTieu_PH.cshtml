@@ -1,0 +1,56 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.MUCTIEU>
+
+@{
+    ViewBag.Title = "showMucTieu_PH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<body>
+    <script src="~/MyJs/todo.js"></script>
+    <div class="container">
+        <div class="infoTodo">
+            @foreach (var item in Model)
+            {
+                <div class="infoTodoItem">
+                    <div style="display: flex;">
+
+                        <p class="details-link" id="open-dialog" data-id="@item.IDMucTieu">@item.TenMucTieu</p>
+                        <div class="open-infoDetail" id="open-infoDetail" style="z-index:3;">
+                            <div class="content-Detail">
+                                <textarea class="updateMission" id="UpdateMission" name="input">@item.TenMucTieu</textarea>
+                                @{
+                                    string myString = "";
+                                }
+                            </div>
+                            <script>
+                            var myVar = "Hello World";
+                            var encodedVar = '@Html.Raw(Json.Encode(myString))';
+                            </script>
+                        </div>
+                    </div>
+                </div>
+
+            }
+            <script>
+        // Add a click event listener to each details link
+        var detailsLinks = document.querySelectorAll('.details-link');
+        detailsLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // Get the id of the clicked todo item
+                var todoId = this.getAttribute('data-id');
+
+                // Get the details div for the clicked todo item
+                var detailsDiv = this.nextElementSibling;
+
+                // Toggle the visibility of the details div
+                if (detailsDiv.style.display === 'none') {
+                    detailsDiv.style.display = 'block';
+                } else {
+                    detailsDiv.style.display = 'none';
+                }
+            });
+        });
+            </script>
+        </div>
+    </div>
+</body>

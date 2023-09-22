@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.THOIKHOABIEU>
+
+@{
+    ViewBag.Title = "showTKB_PH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/MyCss/nhomhoctap.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div class="content">
+    <h1>Các thời khóa biểu đã tạo</h1>
+    <div class="content-group">
+        @foreach (var item in Model)
+        {
+            <div class="content-group-item">
+                <div class="content-group-item-name" onclick="location.href='@Url.Action("showTietHoc_PH", "TIETHOCs", new {idtkb=item.IDTKB})'">
+                    <p>@item.TenTKB</p>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.BAITAP>
+
+@{
+    ViewBag.Title = "showBaiTap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>showBaiTap</h2>
+
+<link rel="stylesheet" href="~/MyCss/baitap.css" />
+<div class="content">
+    <h1>Các bài tập đã giao</h1>
+    <div class="content-group">
+        @foreach (var item in Model)
+        {
+            <div class="content-group-item">
+                <div class="content-group-item-name">
+                    <p id="tenbt" style="border-color:red">@item.TenBT</p>
+                    <span style="margin-left:30px; font-size:10px">Hạn nộp: @item.HanNop.ToString()</span>
+                    @if (item.HanNop < DateTime.Now)
+                    {
+                        <span style="font-size: 10px; color: red; border-color: red">Quá hạn</span>
+                    }
+                    else
+                    {
+                        <span style="font-size: 10px; border-color: red">Còn hạn</span>
+                    }
+                    @if (item.KTBaiGiai(Session["IDUSER"].ToString(), item.IDBaiTap) == true)
+                    {
+                        <p id="trangthai" style="font-size: 10px;">Đã nộp</p>
+                    }
+                    else
+                    {
+                        <p id="trangthai" style="font-size: 10px;">Chưa nộp</p>
+                    }
+                </div>
+                <button id="nopbai" onclick="location.href='@Url.Action("TaiBT", "BAITAPs", new { idbaitap = item.IDBaiTap })'">Tải xuống</button>
+                <button id="nopbai" onclick="location.href='@Url.Action("ChiTietBaiGiai", "BAIGIAIs", new { idbaitap = item.IDBaiTap, iduser = Session["IDUSER"] })'">Nộp bài</button>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,40 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.MUCTIEU>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMucTieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGUOIDUNG.TenNguoiDung)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMucTieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGUOIDUNG.TenNguoiDung)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDMucTieu }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDMucTieu }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDMucTieu })
+        </td>
+    </tr>
+}
+
+</table>

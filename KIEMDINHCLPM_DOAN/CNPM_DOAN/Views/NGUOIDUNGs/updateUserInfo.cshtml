@@ -1,0 +1,56 @@
+﻿@model CNPM_DOAN.Models.NGUOIDUNG
+
+@{
+    ViewBag.Title = "updateUserInfo";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/MyCss/Chinhsuatttaikhoan.css" />
+<main>
+    <div class="border">
+        @using (Html.BeginForm("updateUserInfo", "NGUOIDUNGs", new { id = Session["IDUSER"] }))
+        {
+            @Html.AntiForgeryToken()
+            <table class="chsuathtin">
+                <h1 class="tieude">Chỉnh sửa thông tin tài khoản</h1>
+                <tr>
+                    <td>Họ và tên: </td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="TenNguoiDung" value="@Model.TenNguoiDung"></td>
+                    @Html.ValidationMessageFor(model => model.TenNguoiDung, "", new { @class = "text-danger" })
+                </tr>
+                <tr>
+                    <td>Email: </td>
+                </tr>
+                <tr>
+                    <td><input type="email" name="Email" value="@Model.Email"></td>
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </tr>
+                <tr>
+                    <td>Ngày sinh: </td>
+                </tr>
+                <tr>
+                    <td><input type="date" name="NgaySinh" value="@Model.NgaySinh"></td>
+                    @Html.ValidationMessageFor(model => model.NgaySinh, "", new { @class = "text-danger" })
+                </tr>
+                <br />
+                <tr>
+                    <td>Giới tính: </td>
+                    <td>
+                        <select class="gioitinh" value="@Model.GioiTinh" name="GioiTinh" required>
+                            <option value="Nam">Nam</option>
+                            <option value="Nữ">Nữ</option>
+                        </select>
+                    <td>@Html.ValidationMessageFor(model => model.GioiTinh, "", new { @class = "text-danger" })</td>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="btluuchinhsua"><input type="submit" value="Lưu"></td>
+                </tr>
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            </table>
+        }
+    </div>
+</main>
+

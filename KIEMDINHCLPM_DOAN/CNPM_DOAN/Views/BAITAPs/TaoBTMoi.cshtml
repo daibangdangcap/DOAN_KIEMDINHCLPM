@@ -1,0 +1,22 @@
+﻿@model CNPM_DOAN.Models.BAITAP
+<link rel="stylesheet" href="~/MyCss/taobtmoi.css" />
+<div class="content">
+<table class="suabaitap">
+    @using (Html.BeginForm("TaoBTMoi", "BAITAPs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <tr class="button">
+            <td>&nbsp;</td>
+            <td class="choose"><input type="file" name="bt"></td>
+        </tr>
+        <tr class="button1">
+            <td class="btchsuamk"><input type="date" name="hanchot"></td>
+        </tr>
+        <input type="hidden" name="idnguoitao" value="@Session["IDUSER"]" />
+        <input type="hidden" name="idnguoinhan" value="@Session["IDNGUOINHAN"]" />
+        <tr class="button2">
+            <td>&nbsp;</td>
+            <td class="btxacnhan"><input type="submit" value="Xác nhận"></td>
+        </tr>
+    }
+    </table>
+</div>

@@ -1,0 +1,31 @@
+﻿@model CNPM_DOAN.Models.THOIKHOABIEU
+
+@{
+    ViewBag.Title = "taoTKBMoi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+
+}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<div class="content">
+    @using (Html.BeginForm("taoTKBMoi", "THOIKHOABIEUx", new { idnguoitao = Session["IDUSER"] },FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TenTKB, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TenTKB, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TenTKB, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @Html.HiddenFor(model => model.IDNguoiDung, "HS8o")
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    }
+</div>

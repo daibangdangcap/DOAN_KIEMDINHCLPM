@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CNPM_DOANModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BAIGIAI">
+    <Key>
+      <PropertyRef Name="IDBaiGiai" />
+    </Key>
+    <Property Name="IDBaiGiai" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TenBaiGiai" Type="nvarchar" MaxLength="50" />
+    <Property Name="DuongDan" Type="varbinary(max)" />
+    <Property Name="LoaiTep" Type="varchar" MaxLength="100" />
+    <Property Name="SoDiem" Type="float" />
+    <Property Name="NgayHoanThanh" Type="datetime" />
+    <Property Name="IDNguoiDung" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IDBaiTap" Type="varchar" MaxLength="5" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BAITAP">
+    <Key>
+      <PropertyRef Name="IDBaiTap" />
+    </Key>
+    <Property Name="IDBaiTap" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TenBT" Type="nvarchar" MaxLength="50" />
+    <Property Name="NgayGiao" Type="datetime" />
+    <Property Name="HanNop" Type="datetime" />
+    <Property Name="IDNguoiTao" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="IDNguoiNhan" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DuongDan" Type="varbinary(max)" />
+    <Property Name="LoaiTep" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="MUCTIEU">
+    <Key>
+      <PropertyRef Name="IDMucTieu" />
+    </Key>
+    <Property Name="IDMucTieu" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenMucTieu" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="IDNguoiDung" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NGUOIDUNG">
+    <Key>
+      <PropertyRef Name="IDNguoiDung" />
+    </Key>
+    <Property Name="IDNguoiDung" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="TenNguoiDung" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="GioiTinh" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NgaySinh" Type="date" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="Avatar" Type="varbinary(max)" />
+    <Property Name="TenTaiKhoan" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MatKhau" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDVaiTro" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDQuanLy" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="THOIKHOABIEU">
+    <Key>
+      <PropertyRef Name="IDTKB" />
+    </Key>
+    <Property Name="IDTKB" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TenTKB" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="IDNguoiDung" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TIETHOC">
+    <Key>
+      <PropertyRef Name="IDMonHoc" />
+    </Key>
+    <Property Name="IDMonHoc" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TenMH" Type="nvarchar" MaxLength="30" Nullable="false" />
+    <Property Name="Thu" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TietBatDau" Type="smallint" Nullable="false" />
+    <Property Name="TietKetThuc" Type="smallint" Nullable="false" />
+    <Property Name="IDTKB" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="IDNGUOITAO" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TODO">
+    <Key>
+      <PropertyRef Name="IDToDo" />
+    </Key>
+    <Property Name="IDToDo" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="NDToDo" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="NgayBatDau" Type="datetime" />
+    <Property Name="NgayHoanThanh" Type="datetime" />
+    <Property Name="HanChot" Type="datetime" />
+    <Property Name="TrangThai" Type="nvarchar" MaxLength="30" />
+    <Property Name="IDNguoiDung" Type="varchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="VAITRO">
+    <Key>
+      <PropertyRef Name="IDVaiTro" />
+    </Key>
+    <Property Name="IDVaiTro" Type="varchar" MaxLength="5" Nullable="false" />
+    <Property Name="TenVaiTro" Type="nvarchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__BAIGIAI__IDBaiTa__71D1E811">
+    <End Role="BAITAP" Type="Self.BAITAP" Multiplicity="1" />
+    <End Role="BAIGIAI" Type="Self.BAIGIAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BAITAP">
+        <PropertyRef Name="IDBaiTap" />
+      </Principal>
+      <Dependent Role="BAIGIAI">
+        <PropertyRef Name="IDBaiTap" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BAIGIAI__IDNguoi__534D60F1">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="BAIGIAI" Type="Self.BAIGIAI" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="BAIGIAI">
+        <PropertyRef Name="IDNguoiDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BAITAP__IDNguoiN__70DDC3D8">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="BAITAP" Type="Self.BAITAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="BAITAP">
+        <PropertyRef Name="IDNguoiNhan" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__BAITAP__IDNguoiT__6FE99F9F">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="BAITAP" Type="Self.BAITAP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="BAITAP">
+        <PropertyRef Name="IDNguoiTao" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__MUCTIEU__IDNguoi__59FA5E80">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="MUCTIEU" Type="Self.MUCTIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="MUCTIEU">
+        <PropertyRef Name="IDNguoiDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NGUOIDUNG__IDQua__49C3F6B7">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="NGUOIDUNG1" Type="Self.NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="NGUOIDUNG1">
+        <PropertyRef Name="IDQuanLy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__NGUOIDUNG__IDVai__48CFD27E">
+    <End Role="VAITRO" Type="Self.VAITRO" Multiplicity="1" />
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="VAITRO">
+        <PropertyRef Name="IDVaiTro" />
+      </Principal>
+      <Dependent Role="NGUOIDUNG">
+        <PropertyRef Name="IDVaiTro" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__THOIKHOAB__IDNgu__4CA06362">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="THOIKHOABIEU">
+        <PropertyRef Name="IDNguoiDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIETHOC__IDNGUOI__5DCAEF64">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="TIETHOC" Type="Self.TIETHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="TIETHOC">
+        <PropertyRef Name="IDNGUOITAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TIETHOC__IDTKB__5CD6CB2B">
+    <End Role="THOIKHOABIEU" Type="Self.THOIKHOABIEU" Multiplicity="1" />
+    <End Role="TIETHOC" Type="Self.TIETHOC" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="THOIKHOABIEU">
+        <PropertyRef Name="IDTKB" />
+      </Principal>
+      <Dependent Role="TIETHOC">
+        <PropertyRef Name="IDTKB" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TODO__IDNguoiDun__571DF1D5">
+    <End Role="NGUOIDUNG" Type="Self.NGUOIDUNG" Multiplicity="1" />
+    <End Role="TODO" Type="Self.TODO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NGUOIDUNG">
+        <PropertyRef Name="IDNguoiDung" />
+      </Principal>
+      <Dependent Role="TODO">
+        <PropertyRef Name="IDNguoiDung" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CNPM_DOANModelStoreContainer">
+    <EntitySet Name="BAIGIAI" EntityType="Self.BAIGIAI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BAITAP" EntityType="Self.BAITAP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MUCTIEU" EntityType="Self.MUCTIEU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NGUOIDUNG" EntityType="Self.NGUOIDUNG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="THOIKHOABIEU" EntityType="Self.THOIKHOABIEU" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TIETHOC" EntityType="Self.TIETHOC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TODO" EntityType="Self.TODO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VAITRO" EntityType="Self.VAITRO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__BAIGIAI__IDBaiTa__71D1E811" Association="Self.FK__BAIGIAI__IDBaiTa__71D1E811">
+      <End Role="BAITAP" EntitySet="BAITAP" />
+      <End Role="BAIGIAI" EntitySet="BAIGIAI" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BAIGIAI__IDNguoi__534D60F1" Association="Self.FK__BAIGIAI__IDNguoi__534D60F1">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+      <End Role="BAIGIAI" EntitySet="BAIGIAI" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BAITAP__IDNguoiN__70DDC3D8" Association="Self.FK__BAITAP__IDNguoiN__70DDC3D8">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+      <End Role="BAITAP" EntitySet="BAITAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK__BAITAP__IDNguoiT__6FE99F9F" Association="Self.FK__BAITAP__IDNguoiT__6FE99F9F">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+      <End Role="BAITAP" EntitySet="BAITAP" />
+    </AssociationSet>
+    <AssociationSet Name="FK__MUCTIEU__IDNguoi__59FA5E80" Association="Self.FK__MUCTIEU__IDNguoi__59FA5E80">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+      <End Role="MUCTIEU" EntitySet="MUCTIEU" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NGUOIDUNG__IDQua__49C3F6B7" Association="Self.FK__NGUOIDUNG__IDQua__49C3F6B7">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+      <End Role="NGUOIDUNG1" EntitySet="NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__NGUOIDUNG__IDVai__48CFD27E" Association="Self.FK__NGUOIDUNG__IDVai__48CFD27E">
+      <End Role="VAITRO" EntitySet="VAITRO" />
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+    </AssociationSet>
+    <AssociationSet Name="FK__THOIKHOAB__IDNgu__4CA06362" Association="Self.FK__THOIKHOAB__IDNgu__4CA06362">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIETHOC__IDNGUOI__5DCAEF64" Association="Self.FK__TIETHOC__IDNGUOI__5DCAEF64">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+      <End Role="TIETHOC" EntitySet="TIETHOC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TIETHOC__IDTKB__5CD6CB2B" Association="Self.FK__TIETHOC__IDTKB__5CD6CB2B">
+      <End Role="THOIKHOABIEU" EntitySet="THOIKHOABIEU" />
+      <End Role="TIETHOC" EntitySet="TIETHOC" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TODO__IDNguoiDun__571DF1D5" Association="Self.FK__TODO__IDNguoiDun__571DF1D5">
+      <End Role="NGUOIDUNG" EntitySet="NGUOIDUNG" />
+      <End Role="TODO" EntitySet="TODO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

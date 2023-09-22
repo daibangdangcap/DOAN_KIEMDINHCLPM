@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.TIETHOC>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TietBatDau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TietKetThuc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGUOIDUNG.TenNguoiDung)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THOIKHOABIEU.TenTKB)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TietBatDau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TietKetThuc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGUOIDUNG.TenNguoiDung)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.THOIKHOABIEU.TenTKB)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDMonHoc }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDMonHoc }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDMonHoc })
+        </td>
+    </tr>
+}
+
+</table>

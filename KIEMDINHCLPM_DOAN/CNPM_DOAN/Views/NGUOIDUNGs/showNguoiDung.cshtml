@@ -1,0 +1,23 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.NGUOIDUNG>
+
+@{
+    ViewBag.Title = "showToDo";
+}
+<link rel="stylesheet" href="~/MyCss/nhomhoctap.css" />
+<body>
+    <script src="~/MyJs/todo.js"></script>
+    <div class="content">
+        <div class="content-group">
+            @foreach (var item in Model)
+            {
+                <div class="content-group-item">
+                    <div class="content-group-item-name">
+                        <p>@item.TenNguoiDung</p>
+                    </div>
+                    <button class="deleteGroup" onclick="location.href='@Url.Action("deleteTaiKhoan_PH", "NGUOIDUNGs", new { idquanly = Session["IDUSER"],iduser=item.IDNguoiDung })'"><i class="fa-solid fa-trash"></i></button>
+                </div>
+            }
+        </div>
+        <button id="addGroup" onclick="location.href='@Url.Action("Register_PH", "NGUOIDUNGs", new { idquanly = Session["IDUSER"] })'">Thêm học sinh mới</button>
+    </div>
+</body>

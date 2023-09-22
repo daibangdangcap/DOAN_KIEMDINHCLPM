@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.TODO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NDToDo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayBatDau)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayHoanThanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HanChot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGUOIDUNG.TenNguoiDung)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NDToDo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayBatDau)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayHoanThanh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HanChot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrangThai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGUOIDUNG.TenNguoiDung)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDToDo }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDToDo }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDToDo })
+        </td>
+    </tr>
+}
+
+</table>

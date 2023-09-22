@@ -1,0 +1,82 @@
+﻿h2 {
+    position: relative;
+    top: 60px;
+    left: 50px;
+    font-size: 60px;
+    font-family: monospace;
+}
+
+.monhoc {
+    position: relative;
+    top: 70px;
+    left: 30px;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.label_monhoc {
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.thu {
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.batdau {
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.ketthuc {
+    position: relative;
+    top: 20px;
+    font-size: 30px;
+    font-family: monospace;
+}
+
+.btxacnhan {
+    position: relative;
+    top: 30px;
+    font-size: 30px;
+    font-family: monospace;
+    border-color: #3A5FCD;
+    background-color: lightskyblue;
+}
+
+.bthuy {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    font-size: 30px;
+    font-family: monospace;
+    border-color: #3A5FCD;
+    background-color: lightskyblue;
+}
+
+.input_monhoc {
+    position: relative;
+    font-size: 20px;
+}
+
+.Day {
+    position: relative;
+    font-size: 20px;
+}
+
+.start {
+    position: relative;
+    font-size: 20px;
+}
+
+.end {
+    position: relative;
+    font-size: 20px;
+}

@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vw;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+
+    .overlay.active {
+        display: block;
+    }
+
+.login {
+    width: 300px;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    z-index: 2;
+    background-color: white;
+    transform: translate(-50%,50%) scale(0);
+}
+
+    .login.active {
+        transition: all 300ms ease-in-out;
+        transform: translate(-50%,50%) scale(1);
+    }
+
+    .login h2 {
+        color: gray;
+        font-family: sans-serif;
+        margin-top: 50px;
+        font-size: 30px;
+        margin-bottom:10px;
+    }
+
+    .inputForm {
+        width: 200px;
+        height: 40px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        padding-left: 20px;
+        margin-bottom:10px;
+    }
+
+#nameAccount {
+    margin-top: 30px;
+}
+
+#password {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.buttonLogin {
+    width: 220px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3A5FCD;
+    text-transform: uppercase;
+    letter-spacing: .10rem;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    color: whitesmoke;
+    transition: all .35s;
+    cursor: pointer;
+}
+
+    .buttonLogin span {
+        position: relative;
+        z-index: 2;
+    }
+
+    .buttonLogin:after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        background: #79CDCD;
+        transition: all .35s;
+    }
+
+    .buttonLogin:hover {
+        color: black;
+    }
+
+        .buttonLogin:hover:after {
+            width: 100%;
+        }

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.BAIGIAI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TenBaiGiai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DuongDan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiTep)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoDiem)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayHoanThanh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BAITAP.IDNhom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGUOIDUNG.TenNguoiDung)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenBaiGiai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DuongDan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiTep)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoDiem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayHoanThanh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BAITAP.IDNhom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGUOIDUNG.TenNguoiDung)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDBaiGiai }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDBaiGiai }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDBaiGiai })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,116 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: sans-serif;
+    background-color: rgb(90, 181, 238);
+}
+
+.open-modal-btn {
+    padding: 20px 40px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25px;
+}
+
+.modal0 {
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal_inner {
+    width: 400px;
+    position: relative;
+    top: 50%;
+    margin: auto;
+    background: rgb(242, 243, 247);
+    border-radius: 5px;
+    overflow: hidden;
+    animation: modalShow 0.2s linear;
+}
+
+.modal_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: rgb(164, 212, 241);
+}
+
+.modal_body {
+    padding: 10px;
+}
+
+.modal_footer {
+    padding: 15px;
+}
+
+    .modal_footer button {
+        width: 100px;
+        height: 28px;
+        padding: 5px 10px;
+        color: black;
+        border-radius: 15px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+
+/*.btxoa{
+    position: relative;
+    background-color: rgb(209, 205, 205);
+    left: 60px;
+}*/
+
+.delete-button {
+    position: relative;
+    background-color: rgb(209, 205, 205);
+    color: white;
+    cursor: not-allowed;
+    left: 60px;
+}
+
+    .delete-button.enabled {
+        background-color: red;
+        cursor: pointer;
+    }
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.comeback-button {
+    position: relative;
+    background-color: white;
+    left: 110px;
+}
+
+.hide {
+    display: none;
+}
+
+@keyframes modalShow {
+    from {
+        top: -200px;
+        opacity: 0;
+    }
+
+    to {
+        top: 30%;
+        opacity: 1;
+    }
+}

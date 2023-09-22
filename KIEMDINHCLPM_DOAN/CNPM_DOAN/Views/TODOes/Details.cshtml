@@ -1,0 +1,67 @@
+﻿@model CNPM_DOAN.Models.TODO
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TODO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NDToDo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NDToDo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayBatDau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayBatDau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayHoanThanh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayHoanThanh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HanChot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HanChot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TrangThai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TrangThai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGUOIDUNG.TenNguoiDung)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGUOIDUNG.TenNguoiDung)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDToDo }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

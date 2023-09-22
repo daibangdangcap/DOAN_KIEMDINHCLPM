@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4cc8cfc23ab74adcb5e27caf657d5d70" Name="Diagram1">
+        <EntityTypeShape EntityType="CNPM_DOANModel.BAIGIAI" Width="1.5" PointX="7.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPM_DOANModel.BAITAP" Width="1.5" PointX="5.25" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPM_DOANModel.MUCTIEU" Width="1.5" PointX="5.25" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPM_DOANModel.NGUOIDUNG" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPM_DOANModel.THOIKHOABIEU" Width="1.5" PointX="5.25" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPM_DOANModel.TIETHOC" Width="1.5" PointX="7.5" PointY="12.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPM_DOANModel.TODO" Width="1.5" PointX="5.25" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CNPM_DOANModel.VAITRO" Width="1.5" PointX="0.75" PointY="8.875" IsExpanded="true" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__BAIGIAI__IDBaiTa__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__BAIGIAI__IDNguoi__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__BAITAP__IDNguoiN__5070F446" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__BAITAP__IDNguoiT__4F7CD00D" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__MUCTIEU__IDNguoi__59FA5E80" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__NGUOIDUNG__IDQua__49C3F6B7" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__NGUOIDUNG__IDVai__48CFD27E" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__THOIKHOAB__IDNgu__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__TIETHOC__IDNGUOI__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__TODO__IDNguoiDun__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="CNPM_DOANModel.FK__TIETHOC__IDTKB__5CD6CB2B" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

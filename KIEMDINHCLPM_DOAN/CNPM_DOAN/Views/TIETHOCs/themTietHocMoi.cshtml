@@ -1,0 +1,86 @@
+﻿@model CNPM_DOAN.Models.TIETHOC
+
+@{
+    ViewBag.Title = "themTietHocMoi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/MyCss/themlichhoc.css" />
+<div class="content">
+    <h2> Thêm lịch học </h2>
+    <div class="monhoc">
+        @using (Html.BeginForm("themTietHocMoi", "TIETHOCs", FormMethod.Post))
+        {
+            <div class="label_monhoc">
+                <label for="class">Tên môn học: </label>
+                <td><input class="input_monhoc" type="text" id="mhoc" name="monhoc" placeholder=""></td>
+            </div>
+            <br>
+            <tr>
+                <div class="thu">
+                <td> Thứ: </td>
+                <td>
+                    <select class="Day" name="day">
+                        <option value="2"> Thứ hai </option>
+                        <option value="3"> Thứ ba </option>
+                        <option value="4"> Thứ tư </option>
+                        <option value="5"> Thứ năm </option>
+                        <option value="6"> Thứ sáu </option>
+                        <option value="7"> Thứ bảy </option>
+                    </select>
+                </td>
+        </div>
+    
+    </tr>
+    <br>
+    <tr>
+        <div class="batdau">
+        <td> Tiết bắt đầu: </td>
+        <td>
+            <select class="start" name="start">
+                <option value="1"> 1 </option>
+                <option value="2"> 2 </option>
+                <option value="3"> 3 </option>
+                <option value="4"> 4 </option>
+                <option value="5"> 5 </option>
+                <option value="6"> 6 </option>
+                <option value="7"> 7 </option>
+                <option value="8"> 8 </option>
+                <option value="9"> 9 </option>
+                <option value="10"> 10 </option>
+            </select>
+        </td>
+</div>
+        </tr>
+<br>
+<tr>
+    <div class="ketthuc">
+    <td> Tiết kết thúc: </td>
+    <td>
+        <select class="end" name="end">
+            <option value="1"> 1 </option>
+            <option value="2"> 2 </option>
+            <option value="3"> 3 </option>
+            <option value="4"> 4 </option>
+            <option value="5"> 5 </option>
+            <option value="6"> 6 </option>
+            <option value="7"> 7 </option>
+            <option value="8"> 8 </option>
+            <option value="9"> 9 </option>
+            <option value="10"> 10 </option>
+        </select>
+    </td>
+    </div>
+</tr>
+<br>
+<input type="hidden" name="iduser" value="@Session["IDUSER"]" />
+<input type="hidden" name="idtkbb" value="@Session["IDTKB"]" />
+<tr>
+    <td class="btxacnhan"><input type="submit" class="btxacnhan"><span>Xác nhận </span></td>
+</tr>
+<br>
+}
+<tr>
+    <td class="bthuy"><button class="bthuy" onclick="location.href='@Url.Action("showTietHoc", "TIETHOCs", new { idtkb = Session["IDTKB"] })'">Hủy</button></td>
+</tr>
+</div>
+</div>

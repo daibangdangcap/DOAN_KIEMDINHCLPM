@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "view1";
+    Layout = null;
+}
+<link rel="stylesheet" href="~/MyCss/xoataikhoan.css" />
+<script src="~/MyJs/xoataikhoan.js"></script>
+<button class="open-modal-btn">Xóa Tài Khoản</button>
+<div class="modal hide">
+    <div class="modal__inner">
+        <div class="modal__header">
+            <p>Bạn có muốn xóa tài khoản không?</p>
+            <i class="fas fa-times"></i>
+        </div>
+        <div class="modal__body">
+            <p>Hệ thống sẽ tự động xóa đi các dữ liệu liên quan đến dữ liệu của bạn và bạn sẽ không thể nào đăng nhập lại bằng tài khoản này được nữa.</p><br>
+            <input type="checkbox" class="confirm-checkbox" id="confirm-checkbox" name="fav_language" value="Tôi đã hiểu và muốn tiếp tục">
+            <label for="confirm-checkbox">Tôi đã hiểu và muốn tiếp tục</label><br>
+        </div>
+        <div class="modal__footer">
+            <button class="delete-button disabled">Xóa</button>
+            <button class="comeback-button">Quay lại</button>
+        </div>
+    </div>
+</div>
+

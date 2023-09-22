@@ -1,0 +1,90 @@
+﻿@model CNPM_DOAN.Models.NGUOIDUNG
+
+@{
+    ViewBag.Title = "Informs";
+    Layout = null;
+}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xoa Tai Khoan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="~/MyCss/xoataikhoan.css" />
+    <link rel="stylesheet" href="~/MyCss/informs.css" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+</head>
+<body>
+    <div class="container emp-profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    @if (Model.Avatar != null)
+                    {
+                        <img src="@Url.Action("GetImage", "NGUOIDUNGs", new { id = Model.IDNguoiDung })" alt="" />
+                    }
+                    else
+                    {<img src="" alt="" />}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-8">
+                    <div class="tab-content profile-tab" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Họ và tên</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.TenNguoiDung</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Email</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.Email</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Ngày sinh</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.NgaySinh.ToString("dd/MM/yyyy")</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Giới tính</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.GioiTinh</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Tên tài khoản</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>@Model.TenTaiKhoan</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>Mật khẩu</label>
+                                </div>
+                                <div class="col-md-6">
+                                    <p>************</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

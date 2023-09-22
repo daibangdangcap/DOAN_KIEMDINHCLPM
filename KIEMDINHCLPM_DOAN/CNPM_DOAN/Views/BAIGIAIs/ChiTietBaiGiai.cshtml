@@ -1,0 +1,28 @@
+﻿@model CNPM_DOAN.Models.BAIGIAI
+
+@{
+    ViewBag.Title = "ChiTietBaiGiai";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+    @if (Model == null)
+    {
+        <p>Chưa nộp bài</p>
+        <button id="addGroup" onclick="location.href='@Url.Action("NopBaiTap", "BAIGIAIs")'">Nộp bài</button>
+    }
+    else
+    {
+        <p>@Model.TenBaiGiai</p>
+        <p>@Model.NgayHoanThanh</p>
+        if (Model.SoDiem == null)
+                {
+                    <p>Chưa có điểm</p>
+                }
+        else
+                {
+                    <p>Điểm: </p><span>@Model.SoDiem</span>
+                }
+        <button onclick="location.href='@Url.Action("ChinhSuaBaiNop", "BAIGIAIs", new { idbaigiai = Model.IDBaiGiai })'">Chỉnh sửa bài nộp</button>
+    }
+</div>

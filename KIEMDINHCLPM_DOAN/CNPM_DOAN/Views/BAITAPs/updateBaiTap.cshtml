@@ -1,0 +1,27 @@
+﻿@model CNPM_DOAN.Models.BAITAP
+
+@{
+    ViewBag.Title = "updateBaiTap";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="~/MyCss/taobtmoi.css" />
+<div class="content">
+    <table class="suabaitap">
+        @using (Html.BeginForm("updateBaiTap", "BAITAPs", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <tr class="button">
+                <td>&nbsp;</td>
+                <td class="choose"><input type="file" name="bt"></td>
+            </tr>
+            <tr class="button1">
+                <td class="btchsuamk"><input type="date" name="hanchot" value="@Model.HanNop"></td>
+            </tr>
+            <input type="hidden" name="idbaitap" value="@Model.IDBaiTap" />
+            <input type="hidden" name="idnguoinhan" value="@Model.IDNguoiNhan" />
+            <tr class="button2">
+                <td>&nbsp;</td>
+                <td class="btxacnhan"><input type="submit" value="Xác nhận"></td>
+            </tr>
+        }
+    </table>
+</div>

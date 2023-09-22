@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "showBieuDoBT_PH";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/chart.js"></script>
+<script src="~/Scripts/chart.min.js"></script>
+<div class="content">
+    <div>
+        <canvas id="myChart">
+        </canvas>
+        <div style="text-align:center; margin-top:2vh; ">
+            <p>Màu xanh: Đã hoàn thành</p>
+            <p>Màu đỏ: Chưa hoàn thành</p>
+        </div>
+    </div>
+</div>
+<script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: @Html.Raw(Json.Encode(ViewBag.DataValues)),
+                backgroundColor: @Html.Raw(Json.Encode(ViewBag.DataColors))
+            }]
+        }
+    });
+</script>

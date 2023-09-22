@@ -1,0 +1,80 @@
+﻿* {
+    position: relative;
+    font-family: monospace;
+    font-size: 40px;
+}
+
+.chinhsua {
+    position: relative;
+    top: 30px;
+}
+
+.chsuamk {
+    position: relative;
+    font-size: 80px;
+}
+
+.tieude {
+    text-align: center;
+    font-size: 40px;
+    color: darkblue;
+}
+
+.MKC {
+    position: relative;
+    right: 60px;
+}
+
+.MKM {
+    position: relative;
+    right: 60px;
+}
+
+.XNMK {
+    position: relative;
+    right: 60px;
+}
+
+td {
+    position: relative;
+    left: 580px;
+    font-size: 25px;
+}
+
+input[type=submit] {
+    position: relative;
+    right: 70px;
+    font-size: 20px;
+}
+
+input[type=matkhaucu] {
+    position: relative;
+    right: 70px;
+    font-size: 30px;
+}
+
+input[type=matkhaumoi] {
+    position: relative;
+    right: 70px;
+    font-size: 30px;
+}
+
+input[type=xnmatkhau] {
+    position: relative;
+    right: 70px;
+    font-size: 30px;
+}
+
+input[type=submit] {
+    position: relative;
+    right: 100px;
+    font-size: 30px;
+    top: 20px;
+    background-color: lightblue;
+    border-color: darkblue;
+}
+
+.button {
+    position: relative;
+    right: 170px;
+}

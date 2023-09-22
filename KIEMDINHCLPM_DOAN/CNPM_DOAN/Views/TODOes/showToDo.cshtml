@@ -1,0 +1,75 @@
+﻿@model IEnumerable<CNPM_DOAN.Models.TODO>
+
+@{
+    ViewBag.Title = "showToDo";
+}
+
+<body>
+    <script src="~/MyJs/todo.js"></script>
+    <div class="container">
+        <div class="infoTodo">
+            @foreach (var item in Model)
+            {
+                <div class="infoTodoItem">
+                    <div style="display: flex;">
+                        <button type="button" class="buttonSubmitTodo" onclick="location.href='@Url.Action("CompleteToDo", "TODOes", new { idTodo = item.IDToDo, id = Session["IDUSER"] })'"><i class="fa-solid fa-check"></i></button>
+                        <p class="details-link" id="open-dialog" data-id="@item.IDToDo">@item.NDToDo</p>
+                        <div class="open-infoDetail" id="open-infoDetail" style="z-index:3;">
+                            <div class="content-Detail">
+                                <textarea class="updateMission" id="UpdateMission" name="input">@item.NDToDo</textarea>
+                                @{
+                                    string myString = "";
+                                }
+                            </div>
+                            <script>
+                            var myVar = "Hello World";
+                            var encodedVar = '@Html.Raw(Json.Encode(myString))';
+                            </script>
+                            <div class="button-infoDetail">
+                                <button id="UpdateMissionbtn" onclick="location.href='@Url.Action("UpdateToDo", "TODOes", new { idtodo = item.IDToDo, id = Session["IDUSER"], newNDToDo=myString})'">Lưu</button>
+                                <button id="DeleteMissionbtn" onclick="location.href='@Url.Action("DeleteToDo", "TODOes", new { idTodo = item.IDToDo, id = Session["IDUSER"] })'">Xóa</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    @if (item.TrangThai == "Qúa hạn")
+                    {
+                        <p style="font-size: 12px; width: fit-content; color:red">@item.TrangThai</p>
+                    }
+                    else
+                    {<p style="font-size: 12px; width: fit-content;">@item.TrangThai</p>}
+                    <button class="deleteTrash" style="z-index:0" onclick="location.href='@Url.Action("DeleteToDo", "TODOes", new { idTodo = item.IDToDo, id = Session["IDUSER"] })'"><i class="fa-solid fa-trash"></i></button>
+                </div>
+
+            }
+            <script>
+        // Add a click event listener to each details link
+        var detailsLinks = document.querySelectorAll('.details-link');
+        detailsLinks.forEach(function (link) {
+            link.addEventListener('click', function () {
+                // Get the id of the clicked todo item
+                var todoId = this.getAttribute('data-id');
+
+                // Get the details div for the clicked todo item
+                var detailsDiv = this.nextElementSibling;
+
+                // Toggle the visibility of the details div
+                if (detailsDiv.style.display === 'none') {
+                    detailsDiv.style.display = 'block';
+                } else {
+                    detailsDiv.style.display = 'none';
+                }
+            });
+        });
+            </script>
+        </div>
+        <div class="inputMission" style="z-index:1">
+            <form action="/TODOes/TaoToDo?id=@Session["IDUSER"]" method="post">
+
+                <input type="text" placeholder="Hãy viết nhiệm vụ của bạn vào đây" class="input" name="ndtodo">
+                <button type="submit" class="btnSend"><i class="fa-regular fa-paper-plane"></i>Gửi</button>
+
+            </form>
+        </div>
+    </div>
+</body>
