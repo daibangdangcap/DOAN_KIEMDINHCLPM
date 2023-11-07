@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography.X509Certificates;
 using System.Web;
 using System.Web.Mvc;
 using CNPM_DOAN.Models;
@@ -91,7 +92,7 @@ namespace CNPM_DOAN.Controllers
             {
                 db.Entry(tIETHOC).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("showTietHoc", "TIETHOCs", new {idtkb=tIETHOC.IDTKB});
             }
             ViewBag.IDNGUOITAO = new SelectList(db.NGUOIDUNGs, "IDNguoiDung", "TenNguoiDung", tIETHOC.IDNGUOITAO);
             ViewBag.IDTKB = new SelectList(db.THOIKHOABIEUx, "IDTKB", "TenTKB", tIETHOC.IDTKB);
@@ -162,5 +163,14 @@ namespace CNPM_DOAN.Controllers
             var data = db.TIETHOCs.Where(s => s.IDTKB == idtkb);
             return View(data.ToList());
         }
+
+        public ActionResult deleteTietHoc(string idtiethoc, string IDTKB)
+        {
+            var data = db.TIETHOCs.Find(idtiethoc);
+            db.TIETHOCs.Remove(data);
+            db.SaveChanges();
+            return RedirectToAction("showTietHoc", "TIETHOCs", new {idtkb=IDTKB});
+        }
+
     }
 }

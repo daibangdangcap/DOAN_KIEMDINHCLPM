@@ -22,7 +22,8 @@
             <th>
                 @Html.DisplayName("Tiết kết thúc")
             </th>
-            <th></th>
+            <th>Aciton Edit</th>
+            <th>Action Delete</th>
         </tr>
 
         @foreach (var item in Model)
@@ -40,6 +41,8 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.TietKetThuc)
                 </td>
+                <td><button class="btn btn-info" onclick="location.href='@Url.Action("Edit","TIETHOCs", new {id=item.IDMonHoc})'">Edit</button></td>
+                <td><button class="btn btn-danger" onclick="location.href='@Url.Action("deleteTietHoc", "TIETHOCs", new {idtiethoc=item.IDMonHoc, IDTKB = Session["IDTKB"] })'">Delete</button></td>
             </tr>
         }
     </table>
