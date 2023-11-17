@@ -28,6 +28,7 @@
 
                     @if (item.TrangThai == "Qúa hạn")
                     {
+                        <button onclick="location.href='@Url.Action("giaHanToDo", "TODOes", new { idTodo = item.IDToDo, id = Session["IDUSER"] })'">Gia hạn to-do</button>
                         <p style="font-size: 12px; width: fit-content; color:red">Qúa hạn</p>
                     }
                     else

@@ -297,5 +297,16 @@ namespace CNPM_DOAN.Controllers
             TempData["message"] = "Tạo thành công";
             return RedirectToAction("showToDo_PH", "TODOes", new { iduser = form["idhocsinh"] });
         }
+
+        public ActionResult giaHanToDo(string idTodo, string id)
+        {
+            TimeSpan currentTime = DateTime.Now.TimeOfDay;
+            var data = db.TODOes.Find(idTodo);
+            data.HanChot = DateTime.Now.AddDays(1)+currentTime;
+            data.TrangThai = "Còn hạn";
+            db.Entry(data).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("showToDo", "TODOes", new { iduser = id });
+        }
     }
 }
