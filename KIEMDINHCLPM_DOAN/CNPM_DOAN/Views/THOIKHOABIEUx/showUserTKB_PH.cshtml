@@ -5,20 +5,18 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link rel="stylesheet" href="~/MyCss/nhomhoctap.css" />
 <body>
     <script src="~/MyJs/todo.js"></script>
-    <div class="container">
-        <div class="infoTodo">
+    <div class="content">
+        <div class="content-group">
             @foreach (var item in Model)
             {
-                <div class="infoTodoItem" onclick="location.href='@Url.Action("showTKB_PH", "THOIKHOABIEUx", new { iduser = item.IDNguoiDung })'">
-                    <div style="display: flex;">
-                        <p class="details-link" id="open-dialog">@item.TenNguoiDung</p>
-                        <div class="open-infoDetail" id="open-infoDetail" style="z-index:3;">
-                        </div>
+                <div class="content-group-item" onclick="location.href='@Url.Action("showTKB_PH", "THOIKHOABIEUx", new { iduser = item.IDNguoiDung })'">
+                    <div class="content-group-item-name">
+                        <p>@item.TenNguoiDung</p>
                     </div>
                 </div>
-
             }
         </div>
     </div>

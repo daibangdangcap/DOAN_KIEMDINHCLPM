@@ -3,10 +3,20 @@
 @{
     ViewBag.Title = "showToDo";
 }
-
+<link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="~/MyCss/todo.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
 <body>
+    <link rel="stylesheet" href="~/MyCss/todo.css">
     <script src="~/MyJs/todo.js"></script>
     <div class="container">
+        <div class="modal fade" id="editModal" role="dialog" data-url="@Url.Action("editToDo","TODOes")">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content"></div>
+            </div>
+        </div>
         <div class="infoTodo">
             @foreach (var item in Model)
             {
@@ -14,62 +24,39 @@
                     <div style="display: flex;">
                         <button type="button" class="buttonSubmitTodo" onclick="location.href='@Url.Action("CompleteToDo", "TODOes", new { idTodo = item.IDToDo, id = Session["IDUSER"] })'"><i class="fa-solid fa-check"></i></button>
                         <p class="details-link" id="open-dialog" data-id="@item.IDToDo">@item.NDToDo</p>
-                        <div class="open-infoDetail" id="open-infoDetail" style="z-index:3;">
-                            <div class="content-Detail">
-                                <textarea class="updateMission" id="UpdateMission" name="input">@item.NDToDo</textarea>
-                                @{
-                                    string myString = "";
-                                }
-                            </div>
-                            <script>
-                            var myVar = "Hello World";
-                            var encodedVar = '@Html.Raw(Json.Encode(myString))';
-                            </script>
-                            <div class="button-infoDetail">
-                                <button id="UpdateMissionbtn" onclick="location.href='@Url.Action("UpdateToDo", "TODOes", new { idtodo = item.IDToDo, id = Session["IDUSER"], newNDToDo=myString})'">Lưu</button>
-                                <button id="DeleteMissionbtn" onclick="location.href='@Url.Action("DeleteToDo", "TODOes", new { idTodo = item.IDToDo, id = Session["IDUSER"] })'">Xóa</button>
-                            </div>
-                        </div>
                     </div>
 
                     @if (item.TrangThai == "Qúa hạn")
                     {
-                        <p style="font-size: 12px; width: fit-content; color:red">@item.TrangThai</p>
+                        <p style="font-size: 12px; width: fit-content; color:red">Qúa hạn</p>
                     }
                     else
-                    {<p style="font-size: 12px; width: fit-content;">@item.TrangThai</p>}
+                    {<p style="font-size: 12px; width: fit-content;">Còn hạn</p>}
                     <button class="deleteTrash" style="z-index:0" onclick="location.href='@Url.Action("DeleteToDo", "TODOes", new { idTodo = item.IDToDo, id = Session["IDUSER"] })'"><i class="fa-solid fa-trash"></i></button>
+                    <button class="editTodo" style="z-index:0" id="@item.IDToDo" onclick="edit(this.id)"><i class="fa-solid fa-pen"></i></button>
                 </div>
 
             }
-            <script>
-        // Add a click event listener to each details link
-        var detailsLinks = document.querySelectorAll('.details-link');
-        detailsLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                // Get the id of the clicked todo item
-                var todoId = this.getAttribute('data-id');
 
-                // Get the details div for the clicked todo item
-                var detailsDiv = this.nextElementSibling;
-
-                // Toggle the visibility of the details div
-                if (detailsDiv.style.display === 'none') {
-                    detailsDiv.style.display = 'block';
-                } else {
-                    detailsDiv.style.display = 'none';
-                }
-            });
-        });
-            </script>
         </div>
         <div class="inputMission" style="z-index:1">
             <form action="/TODOes/TaoToDo?id=@Session["IDUSER"]" method="post">
 
-                <input type="text" placeholder="Hãy viết nhiệm vụ của bạn vào đây" class="input" name="ndtodo">
+                <input type="text" placeholder="Hãy nhập nhiệm vụ của bạn vào đây" class="input" name="ndtodo" required>
                 <button type="submit" class="btnSend"><i class="fa-regular fa-paper-plane"></i>Gửi</button>
-
             </form>
         </div>
     </div>
 </body>
+@section scripts{
+    <script type="text/javascript">
+function edit(id) {
+$.get("@Url.Action("editTODO", "TODOes")/" + id,
+function (data) { $('#editModal').html(data); })
+$('#editModal').modal('show');
+}
+$('#editModal').on('hidden.bs.modal', function (e) {
+$('.modal-body').html("")
+})
+    </script>
+}

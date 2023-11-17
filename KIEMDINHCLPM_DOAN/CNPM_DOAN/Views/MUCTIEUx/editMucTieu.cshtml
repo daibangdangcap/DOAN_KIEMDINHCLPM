@@ -1,0 +1,21 @@
+﻿
+<link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+<script src="~/Scripts/bootstrap.min.js"></script>
+<div class="modal-dialog" style="top:30%">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title" id="myModal-label">Chỉnh sửa mục tiêu</h4>
+        </div>
+        <div class="modal-body">
+
+            @using (Html.BeginForm("editMucTieu", "MUCTIEUx", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                <label>Nhập nội dung:</label>
+                <input type="text" name="ndmuctieu" required />
+                <input type="hidden" name="idhocsinh" value="@Session["IDUSER"]" />
+                <input type="hidden" name="idmuctieu" value="@Session["IDMUCTIEU"]" />
+                <button type="submit" class="btn btn-success" style="margin-top:20px; margin-left:40%;">Xác nhận</button>
+            }
+        </div>
+    </div>
+</div>

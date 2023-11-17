@@ -177,5 +177,29 @@ namespace CNPM_DOAN.Controllers
             var data=db.MUCTIEUx.Where(s=>s.IDNguoiDung==iduser);
             return View(data.ToList());
         }
+
+        public ActionResult editMucTieu(string id)
+        {
+            if (Request.IsAjaxRequest())
+            {
+                Session["IDMUCTIEU"] = id;
+                return PartialView();
+            }
+            return PartialView("Error");
+        }
+
+        [HttpPost]
+        public ActionResult editMucTieu(string ndmuctieu, string idhocsinh, string idmuctieu)
+        {
+            var data = db.MUCTIEUx.Find(idmuctieu);
+            if (data != null)
+            {
+                data.TenMucTieu = ndmuctieu;
+                db.Entry(data).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("showMucTieu", "MUCTIEUx", new { idus = idhocsinh });
+            }
+            return RedirectToAction("showMucTieu", "MUCTIEUx", new { idus = idhocsinh });
+        }
     }
 }

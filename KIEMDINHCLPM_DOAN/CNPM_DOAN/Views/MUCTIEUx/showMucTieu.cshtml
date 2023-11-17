@@ -6,60 +6,46 @@
 }
 
 <body>
+    <link rel="stylesheet" href="~/MyCss/muctieu.css">
     <script src="~/MyJs/todo.js"></script>
     <div class="container">
+        <div class="modal fade" id="editModal" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content"></div>
+            </div>
+        </div>
         <div class="infoTodo">
             @foreach (var item in Model)
             {
                 <div class="infoTodoItem">
                     <div style="display: flex;">
-                        
                         <p class="details-link" id="open-dialog" data-id="@item.IDMucTieu">@item.TenMucTieu</p>
-                        <div class="open-infoDetail" id="open-infoDetail" style="z-index:3;">
-                            <div class="content-Detail">
-                                <textarea class="updateMission" id="UpdateMission" name="input">@item.TenMucTieu</textarea>
-                                @{
-                                    string myString = "";
-                                }
-                            </div>
-                            <script>
-                            var myVar = "Hello World";
-                            var encodedVar = '@Html.Raw(Json.Encode(myString))';
-                            </script>
-                        </div>
+                        <button class="editTodo" style="z-index:0" id="@item.IDMucTieu" onclick="edit(this.id)"><i class="fa-solid fa-pen"></i></button>
+                        <button class="deleteTrash" style="z-index:0" onclick="location.href='@Url.Action("DeleteMucTieu", "MUCTIEUx", new { idMT=item.IDMucTieu, id = Session["IDUSER"] })'"><i class="fa-solid fa-trash"></i></button>
                     </div>
-                    <button class="deleteTrash" style="z-index:0" onclick="location.href='@Url.Action("DeleteMucTieu", "MUCTIEUx", new { idMT=item.IDMucTieu, id = Session["IDUSER"] })'"><i class="fa-solid fa-trash"></i></button>
                 </div>
 
             }
-            <script>
-        // Add a click event listener to each details link
-        var detailsLinks = document.querySelectorAll('.details-link');
-        detailsLinks.forEach(function (link) {
-            link.addEventListener('click', function () {
-                // Get the id of the clicked todo item
-                var todoId = this.getAttribute('data-id');
 
-                // Get the details div for the clicked todo item
-                var detailsDiv = this.nextElementSibling;
-
-                // Toggle the visibility of the details div
-                if (detailsDiv.style.display === 'none') {
-                    detailsDiv.style.display = 'block';
-                } else {
-                    detailsDiv.style.display = 'none';
-                }
-            });
-        });
-            </script>
         </div>
         <div class="inputMission" style="z-index:1">
             <form action="/MUCTIEUx/ThemMucTieu?id=@Session["IDUSER"]" method="post">
 
                 <input type="text" placeholder="Hãy viết mục tiêu của bạn vào đây" class="input" name="ndmuctieu">
                 <button type="submit" class="btnSend"><i class="fa-regular fa-paper-plane"></i>Gửi</button>
-
             </form>
         </div>
     </div>
 </body>
+@section scripts{
+    <script type="text/javascript">
+function edit(id) {
+$.get("@Url.Action("editMucTieu", "MUCTIEUx")/" + id,
+function (data) { $('#editModal').html(data); })
+$('#editModal').modal('show');
+}
+$('#editModal').on('hidden.bs.modal', function (e) {
+$('.modal-body').html("")
+})
+    </script>
+}

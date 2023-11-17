@@ -13,7 +13,18 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="~/MyJs/login.js"></script>
     <script src="~/MyJs/register.js"></script>
-    <link rel="stylesheet" href="~/MyCss/todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" />
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
 </head>
 <body>
     <div class="overlay" id="overlayLo" onclick="showDangNhap()"></div>
@@ -21,81 +32,103 @@
     <div class="top-nav">
         <a href=""><img src="~/MyImage/logo-removebg-preview.png" class="logo"></a>
         <ul id="mainmenu">
-            <a href="" class="left-nav" id="gioithieu">Giới thiệu</a>
-            <a href="@Url.Action("lienhe","Home")" class="left-nav" id="lienhe">Liên hệ</a>
+            <li><a href="@Url.Action("gioithieu","Home")">GIỚI THIỆU</a></li>
+            <li><a href="@Url.Action("lienhe","Home")">LIÊN HỆ</a></li>
             @if (Session["TENTAIKHOAN"] == null)
             {
-                <a class="right-nav" id="dangnhap" onclick="showDangNhap()">Đăng nhập</a>
-                <a class="right-nav" id="dangky" onclick="showDangKy()">Đăng ký</a>
+                <li style="margin-left:300px" onclick="showDangNhap()">Đăng nhập</li>
+                <li onclick="showDangKy()">Đăng ký</li>
             }
             else
             {
-                <li><a href="@Url.Action("Informs", "NGUOIDUNGs", new { iduser = Session["IDUSER"] })" class="right-nav nothover">
-    @if (Session["AVATAR"] != null)
-    {
-        <img src="@Url.Action("GetImage", "NGUOIDUNGs", new { id = Session["IDUSER"] })" style="width:50px;height:50px; position:absolute;right:10px; bottom:10px;border-radius:50%" />
-    }
-    else
-    {
-        <img src="~/MyImage/logo-removebg-preview.png" style="width:50px;height:50px; position:absolute;right:10px; bottom:10px;border-radius:50%" />
-    }
-</a></li>
+                <li style="position:absolute; right:0px; top:40px;">
+                    <a href="@Url.Action("Informs", "NGUOIDUNGs", new { iduser = Session["IDUSER"] })" class="nothover">
+                        @if (Session["AVATAR"] != null)
+                        {
+                            <img src="@Url.Action("GetImage", "NGUOIDUNGs", new { id = Session["IDUSER"] })" style="width:50px;height:50px; position:absolute;right:10px; bottom:10px;border-radius:50%" />
+                        }
+                        else
+                        {
+                            <img src="~/MyImage/logo-removebg-preview.png" style="width:50px;height:50px; position:absolute;right:10px; bottom:10px;border-radius:50%" />
+                        }
+                    </a>
+                </li>
             }
         </ul>
     </div>
     @if (Session["TENTAIKHOAN"] != null)
     {
         <div class="menu" style="z-index:2">
-            <div class="menuitem uno"  style="overflow:hidden;">
-                <a href="@Url.Action("showTKB","THOIKHOABIEUx", new { iduser = Session["IDUSER"]})">
-                    <i class="fa-solid fa-calendar" style="margin-left: 5px;"></i>
-                    <span>Thời khóa biểu</span>
-                </a>
-            </div>
-            <div class="menuitem dos" style="overflow:hidden;">
-                <a href="@Url.Action("ShowToDo","TODOes", new { iduser = Session["IDUSER"]})">
-                    <i class="fa-sharp fa-solid fa-clipboard-check" style="margin-left:5px"></i>
-                    <span>To-do list</span>
-                </a>
-            </div>
-            <div class="menuitem tres" style="overflow:hidden;">
-                <a href="@Url.Action("ShowMucTieu","MUCTIEUx", new { idus = Session["IDUSER"]})">
-                    <i class="fa-solid fa-flag" style="margin-left: 5px;"></i>
-                    <span>Mục tiêu</span>
-                </a>
-            </div>
-
-            <div class="menuitem cuatro"  style="overflow:hidden;">
-                @if (Session["IDUSER"].ToString().Contains("PH"))
-                {
+            @if (Session["IDUSER"].ToString().Contains("PH"))
+            {
+                <div class="menuitemPH uno" style="overflow:hidden;">
+                    <a href="@Url.Action("showTKB","THOIKHOABIEUx", new { iduser = Session["IDUSER"]})">
+                        <i class="fa-solid fa-calendar" style="margin-left: 5px; color: #FFFAFA;"></i>
+                        <span>Thời khóa biểu</span>
+                    </a>
+                </div>
+                <div class="menuitemPH dos" style="overflow:hidden;">
+                    <a href="@Url.Action("ShowToDo","TODOes", new { iduser = Session["IDUSER"]})">
+                        <i class="fa-sharp fa-solid fa-clipboard-check" style="margin-left: 5px; color: #FFFAFA;"></i>
+                        <span>To-do list</span>
+                    </a>
+                </div>
+                <div class="menuitemPH tres" style="overflow:hidden;">
+                    <a href="@Url.Action("ShowMucTieu","MUCTIEUx", new { idus = Session["IDUSER"]})">
+                        <i class="fa-solid fa-flag" style="margin-left: 5px; color: #FFFAFA;"></i>
+                        <span>Mục tiêu</span>
+                    </a>
+                </div>
+                <div class="menuitemPH cuatro" style="overflow:hidden;">
                     <a href="@Url.Action("showNguoiDung", "NGUOIDUNGs", new { iduser = Session["IDUSER"] })">
-                        <i class="fa-solid fa-user-group"></i>
+                        <i class="fa-solid fa-user-group" style="color: #FFFAFA;"></i>
                         <span>Nhóm học tập</span>
                     </a>
-                }
-                else
-                {
-                    <a href="@Url.Action("showTTUser", "NGUOIDUNGs", new { iduser = Session["IDUSER"] })">
-                        <i class="fa-solid fa-user-group"></i>
+                </div>
+                <div class="menuitemPH cinco" style="overflow:hidden;">
+                    <a href="@Url.Action("showBaiTap", "BAITAPs", new { iduser = Session["IDUSER"] })">
+                        <i class="fa-solid fa-book-open" style="color: #FFFAFA;"></i>
+                        <span>Bài tập</span>
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="menuitemPH uno" style="overflow:hidden;">
+                    <a href="@Url.Action("showTKB","THOIKHOABIEUx", new { iduser = Session["IDUSER"]})">
+                        <i class="fa-solid fa-calendar" style="margin-left: 5px; color: #FFFAFA;"></i>
+                        <span>Thời khóa biểu</span>
+                    </a>
+                </div>
+                <div class="menuitemPH dos" style="overflow:hidden;">
+                    <a href="@Url.Action("ShowToDo","TODOes", new { iduser = Session["IDUSER"]})">
+                        <i class="fa-sharp fa-solid fa-clipboard-check" style="margin-left: 5px; color: #FFFAFA;"></i>
+                        <span>To-do list</span>
+                    </a>
+                </div>
+                <div class="menuitemPH tres" style="overflow:hidden;">
+                    <a href="@Url.Action("ShowMucTieu","MUCTIEUx", new { idus = Session["IDUSER"]})">
+                        <i class="fa-solid fa-flag" style="margin-left: 5px; color: #FFFAFA;"></i>
+                        <span>Mục tiêu</span>
+                    </a>
+                </div>
+                <div class="menuitemPH cuatro" style="overflow:hidden;">
+                    <a href="">
+                        <i class="fa-solid fa-user-group" style="color: #FFFAFA;"></i>
                         <span>Nhóm học tập</span>
                     </a>
-                }
-            </div>
-            <div class="menuitem cinco" style="overflow:hidden;">
-                <a href="@Url.Action("showBaiTap", "BAITAPs", new { iduser = Session["IDUSER"] })">
-                    <i class="fa-solid fa-book-open"></i>
-                    <span>Bài tập</span>
-                </a>
-            </div>
+                </div>
+                <div class="menuitemPH cinco" style="overflow:hidden;">
+                    <a href="@Url.Action("showBaiTap", "BAITAPs", new { iduser = Session["IDUSER"] })">
+                        <i class="fa-solid fa-book-open" style="color: #FFFAFA;"></i>
+                        <span>Bài tập</span>
+                    </a>
+                </div>
+            }
         </div>
     }
 
-    <!--<h2>Login</h2>
-    <form action="" method="post">
-         <input type="text" placeholder="Tên Đăng Nhập" id="nameAccount" name="username" class="inputForm">
-         <input type="password" placeholder="Mật Khẩu" id="password" name="password" class="inputForm">
-         <button type="submit" class="buttonLogin"><span>Đăng nhập</span></button>
-     </form>-->
+
     @{Html.RenderAction("LoginUser", "NGUOIDUNGs");}
     @{Html.RenderAction("RegisterUser", "NGUOIDUNGs");}
     @RenderBody()

@@ -228,6 +228,7 @@
     <Content Include="MyCss\lienhe.css" />
     <Content Include="MyCss\login.css" />
     <Content Include="MyCss\mainpage.css" />
+    <Content Include="MyCss\muctieu.css" />
     <Content Include="MyCss\nhomhoctap.css" />
     <Content Include="MyCss\register.css" />
     <Content Include="MyCss\taobtmoi.css" />
@@ -362,6 +363,8 @@
     <Content Include="Views\THOIKHOABIEUx\showTKB_PH.cshtml" />
     <Content Include="Views\TIETHOCs\showTietHoc_PH.cshtml" />
     <Content Include="Views\BAITAPs\showBieuDoBT_PH.cshtml" />
+    <Content Include="Views\TODOes\editTODO.cshtml" />
+    <Content Include="Views\MUCTIEUx\editMucTieu.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
