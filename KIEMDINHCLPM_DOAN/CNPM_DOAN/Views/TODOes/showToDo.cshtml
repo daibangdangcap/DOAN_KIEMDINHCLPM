@@ -23,7 +23,7 @@
                 <div class="infoTodoItem">
                     <div style="display: flex;">
                         <button type="button" class="buttonSubmitTodo" onclick="location.href='@Url.Action("CompleteToDo", "TODOes", new { idTodo = item.IDToDo, id = Session["IDUSER"] })'"><i class="fa-solid fa-check"></i></button>
-                        <p class="details-link" id="open-dialog" data-id="@item.IDToDo">@item.NDToDo</p>
+                        <p class="details-link" id="open-dialog" data-id="@item.IDToDo">@Html.Raw(@item.NDToDo)</p>
                     </div>
 
                     @if (item.TrangThai == "Qúa hạn")

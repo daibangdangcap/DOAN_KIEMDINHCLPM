@@ -146,7 +146,7 @@ namespace CNPM_DOAN.Controllers
                 return RedirectToAction("showUserToDo_PH", "TODOes", new { iduser });
             }
         }
-        [HttpPost]
+        [HttpPost, ValidateInput(false)]
         public ActionResult TaoToDo(string id, string ndtodo)
         {
             if (ndtodo == null)
